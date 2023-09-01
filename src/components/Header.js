@@ -1,15 +1,16 @@
-import Header from "./components/Header";
+import React from 'react'
 import styled from "styled-components"
-function App() {
+
+const Header = () => {
   return (
     <Container>
-      <Header/>
+      <>Hello</>
     </Container>
-  );
+  )
 }
 
 const Container = styled.div`
 
-` 
+`
 
-export default App;
+export default Header
