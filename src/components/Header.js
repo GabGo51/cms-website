@@ -10,27 +10,35 @@ const Header = () => {
   };
 
   return (
-    <HeaderWrapper>
-      <Logo>
-        <img src="logo.png" alt="Logo" />
-      </Logo>
-      <Services>
-        <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
-        <ul className={isOpen ? 'open' : ''}>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">TEAM</a></li>
-          <li><a href="#">FIND US</a></li>
-          <li><a href="#">BOOK NOW</a></li>
-        </ul>
-      </Services>
-    </HeaderWrapper>
-    // Au service des athlètes
-    // de la région des Laurentides
+    <Container>
+      <NavWrapper>
+        <Logo>
+          <img src="logo.png" alt="Logo" />
+        </Logo>
+        <Services>
+          <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
+          <ul className={isOpen ? 'open' : ''}>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="#">FIND US</a></li>
+            <li><a href="#">BOOK NOW</a></li>
+          </ul>
+        </Services>
+      </NavWrapper>
+      <h1>Au service des athlètes
+     de la région des Laurentides</h1>
+    </Container>
+    
+    
   );
 };
 
-const HeaderWrapper = styled.header`
+const Container = styled.header`
+
+`
+
+const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +76,7 @@ const Services = styled.nav`
   }
 
   /* Media query for responsive design */
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     i {
       display: block;
     }
