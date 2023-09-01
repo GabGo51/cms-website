@@ -1,6 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
+import Serif from "./fonts/aga.otf"
+import Normal from"./fonts/oy.otf"
 
 export default createGlobalStyle`
+
+@font-face {
+    font-family: Canter;
+    src: url(${Serif});
+  }
+
+  @font-face {
+    font-family: PasCanter;
+    src: url(${Normal});
+  }
 
 
   *,
@@ -8,7 +20,7 @@ export default createGlobalStyle`
   *:after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    cursor: none;
+    
   }
   
   html, body, div,
