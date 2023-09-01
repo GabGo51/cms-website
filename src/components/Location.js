@@ -6,13 +6,11 @@ const Location = () => {
     <Container>
       <Top>
         <h3>ICI POUR VOUS AIDER</h3>
-      <h4>Centre de médecine sportive des Laurentides</h4>
+      
       <p>
         305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9
       </p>
-      <p>Téléphone : 450 438-0911</p>
-      <p>FAX : 450 436-2719</p>
-      <p>Email:</p>
+      
       </Top>
       <Map> MAP</Map>
       <Schedule>
@@ -44,10 +42,20 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom:25px ;
+
+  h3{
+    font-weight: 400;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  & :nth-child(3) {
+    margin-bottom: 2vw;
+}
 `
 const Map = styled.div`
-width: 60vw;
-height: 60vw;
+width: 80vw;
+height: 50vw;
 background-color: grey;
 display: flex;
 align-items: center;

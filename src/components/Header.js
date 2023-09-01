@@ -18,11 +18,11 @@ const Header = () => {
         <Services>
           <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
           <ul className={isOpen ? 'open' : ''}>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">NOTRE CLINIQUE</a></li>
             <li><a href="#">SERVICES</a></li>
-            <li><a href="#">TEAM</a></li>
-            <li><a href="#">FIND US</a></li>
-            <li><a href="#">BOOK NOW</a></li>
+            <li><a href="#">ÉQUIPE</a></li>
+            <li><a href="#">LOCALISATION</a></li>
+            <li><a href="#">RENDEZ-VOUS</a></li>
           </ul>
         </Services>
       </NavWrapper>

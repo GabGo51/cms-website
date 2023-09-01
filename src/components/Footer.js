@@ -6,11 +6,11 @@ const Footer = () => {
     <Container>
       <Nav>
         <ul>
-          <li>About</li>
+          <li>Clinique</li>
           <li>Services</li>
-          <li>Team</li>
-          <li>Find Us</li>
-          <li>Book Now</li>
+          <li>Équipe</li>
+          <li>Localisation</li>
+          <li>Rendez-vous</li>
         </ul>
       </Nav>
       <Content>
@@ -55,7 +55,7 @@ p{
 
 const Nav = styled.nav`
 
-text-align: center;
+
 li{
   margin-bottom:20px;
 }
