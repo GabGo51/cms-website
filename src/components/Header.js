@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-
+import Logo1 from "../img/logo1.png"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +13,7 @@ const Header = () => {
     <Container>
       <NavWrapper>
         <Logo>
-          <img src="logo.png" alt="Logo" />
+          <img src={Logo1} alt="Logo" />
         </Logo>
         <Services>
           <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
@@ -42,27 +42,34 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  background-color: #333;
-  color: white;
+  padding: 1vw 2vw;
+  background-color: white;
+  color: black;
   position: relative;
 
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
 `;
 
 const Logo = styled.div`
   img {
-    width: 100px; /* Adjust the width as needed */
+    width:13vw; 
     height: auto;
+    margin-left: 1vw;
+  @media (max-width: 500px) {
+    width: 20vw;
   }
+  }
+  
 `;
 
 const Services = styled.nav`
   i {
     display: none;
+    transform: translateX(-100%);
+    scale: 1.2;
   }
 
   ul {
@@ -76,7 +83,7 @@ const Services = styled.nav`
   }
 
   /* Media query for responsive design */
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     i {
       display: block;
     }
@@ -87,7 +94,7 @@ const Services = styled.nav`
       position: absolute;
       top: 100%;
       left: 10%;
-      background-color: #333;
+      background-color:white;
       width: 80vw;
     }
 

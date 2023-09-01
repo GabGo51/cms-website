@@ -34,10 +34,12 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 `;
 
 const Top = styled.div`
 display: flex;
+
 flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -54,8 +56,12 @@ flex-direction: column;
 }
 `
 const Map = styled.div`
-width: 80vw;
-height: 50vw;
+min-width: 80vw;
+
+min-height: 500px;
+@media (max-width:800px){
+  min-height: 300px;
+}
 background-color: grey;
 display: flex;
 align-items: center;
