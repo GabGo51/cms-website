@@ -13,10 +13,10 @@ function App() {
     <Container>
       <Header/>
       <Intro/>
-      <Form/>
       <Service/>
       <Location/>
       <Booking/>
+      <Form/>
       <Footer/>
     </Container>
   );

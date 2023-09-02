@@ -18,17 +18,15 @@ const Header = () => {
         <Services>
           <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
           <ul className={isOpen ? 'open' : ''}>
-            <li><a href="#">NOTRE CLINIQUE</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">ÉQUIPE</a></li>
-            <li><a href="#">LOCALISATION</a></li>
-            <li><a href="#">RENDEZ-VOUS</a></li>
+            <li>NOTRE CLINIQUE</li>
+            <li>SERVICES</li>
+            <li>ÉQUIPE</li>
+            <li>LOCALISATION</li>
+            <li>RENDEZ-VOUS</li>
           </ul>
         </Services>
       </NavWrapper>
-      <h1>Centre de médecine sportive des Laurentides</h1>
-      <h2>Au service des athlètes
-     de la région des Laurentides</h2>
+      
     </Container>
     
     
@@ -46,14 +44,23 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vw 2vw;
+  padding: 0.5vw 2vw;
   background-color: white;
   color: black;
   position: relative;
 
-  a {
-    color: black;
+  li{
+    color: #002b54;
     text-decoration: none;
+    padding-bottom: 5px;
+    transition: 0.4s;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid #c2ce21;
+      transform: translateY(-5%);
+    }
   }
 `;
 
@@ -74,6 +81,11 @@ const Services = styled.nav`
     display: none;
     transform: translateX(-100%);
     scale: 1.2;
+    transition: 400ms;
+
+    &:hover{
+      scale: 1.3;
+    }
   }
 
   ul {

@@ -13,12 +13,14 @@ const Form = () => {
   return (
     <Container form = {form}>
       <h2>RENDEZ-VOUS EN LIGNE</h2>
-      <p>Vous pouvez nous transmettre vos information ici et nous allons vous contacter par la suite</p>
+      <p>Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.
+
+Pour les soins d'urgence, veuillez appeler <span>450 438-0911</span> </p>
       <button onClick={toggleForm}>Prendre Rendez-vous</button>
       <i class="fa-solid fa-angle-down" form = {form}></i>
       {form &&(
         <form>
-
+          <input/>
           
         </form>
       )}
@@ -40,15 +42,27 @@ transition: 0.4s;
 h2{
   font-weight: 500;
   font-size: 3em;
-  width: 40vw;
+  max-width: 40vw;
   text-align: center;
   line-height: 50px;
   margin-bottom: 35px;
+  @media (max-width:800px){
+    font-size: 2.5em;
+    max-width: 100vw;
+  }
 }
  p{
   text-align: center;
-  width: 50vw;
+  max-width: 43vw;
   margin-bottom: 40px;
+
+  span{
+    color: #c2ce21;
+  }
+
+  @media (max-width:800px){
+    max-width: 80vw;
+  }
  }
 
  button{
@@ -72,9 +86,14 @@ h2{
  i{
   color: #c2ce21;
   scale: 1.5;
+  transition: 0.5 ease-out;
   ${props => props.form && css`
     transform: rotateX(180deg);
   `}
+ }
+
+ form{
+  margin-top:30px;
  }
 `
 
