@@ -26,8 +26,9 @@ const Header = () => {
           </ul>
         </Services>
       </NavWrapper>
-      <h1>Au service des athlètes
-     de la région des Laurentides</h1>
+      <h1>Centre de médecine sportive des Laurentides</h1>
+      <h2>Au service des athlètes
+     de la région des Laurentides</h2>
     </Container>
     
     
@@ -35,7 +36,10 @@ const Header = () => {
 };
 
 const Container = styled.header`
-
+h1{
+  font-weight: 500;
+  font-size: 3em;
+}
 `
 
 const NavWrapper = styled.div`
