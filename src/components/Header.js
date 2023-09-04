@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-import Logo1 from "../img/logo1.png"
+import Logo1 from "../img/logo2.gif"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,11 +18,11 @@ const Header = () => {
         <Services>
           <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
           <ul className={isOpen ? 'open' : ''}>
-            <li>NOTRE CLINIQUE</li>
+            <li>CLINIQUE</li>
             <li>SERVICES</li>
             <li>ÉQUIPE</li>
             <li>LOCALISATION</li>
-            <li>RENDEZ-VOUS</li>
+            <li>PRENDRE RENDEZ-VOUS</li>
           </ul>
         </Services>
       </NavWrapper>
@@ -44,7 +44,7 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5vw 2vw;
+  padding: 0vw 2vw;
   background-color: white;
   color: black;
   position: relative;
@@ -52,11 +52,11 @@ const NavWrapper = styled.div`
   li{
     color: #002b54;
     text-decoration: none;
-    padding-bottom: 5px;
+    padding: 10px 0px;
     transition: 0.4s;
     cursor: pointer;
     border-bottom: 1px solid transparent;
-
+    margin-right: 4vw;
     &:hover {
       border-bottom: 1px solid #c2ce21;
       transform: translateY(-5%);
@@ -92,11 +92,19 @@ const Services = styled.nav`
     list-style: none;
     padding: 0;
     display: flex;
+
+    li:last-child{
+      background-color: #A1AC00;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      white-space: nowrap;
+      
+    }
   }
 
-  li {
-    margin-right: 5vw;
-  }
+  
 
   /* Media query for responsive design */
   @media (max-width: 900px) {
@@ -121,15 +129,19 @@ const Services = styled.nav`
       /* text-align: center; */
       border-bottom: 1px solid #555;
 
-      &:last-child {
-        border-bottom: none;
-        font-weight: 600;
-      }
+      
     }
 
     /* Show the menu when isOpen state is true */
     ul.open {
       display: flex;
+
+      li:last-child{
+        border-radius: 0;
+        border-bottom: none;
+        font-weight: 600;
+        border-radius: 0px;
+      }
     }
   }
 `;

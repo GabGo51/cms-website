@@ -6,6 +6,7 @@ import Location from "./components/Location";
 import Booking from "./components/Booking";
 import Service from "./components/Service";
 import Form from "./components/Form";
+import Team from "./components/Team";
 
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       <Header/>
       <Intro/>
       <Service/>
+      <Team/>
       <Location/>
-      <Booking/>
+      {/* <Booking/> */}
       <Form/>
       <Footer/>
     </Container>
