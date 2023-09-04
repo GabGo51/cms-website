@@ -5,7 +5,7 @@ const Location = () => {
   return (
     <Container>
       <Top>
-        <h3>ICI POUR VOUS AIDER</h3>
+        <h2>ICI POUR VOUS AIDER</h2>
       
       <p>
         305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9
@@ -45,10 +45,11 @@ flex-direction: column;
   align-items: center;
   margin-bottom:25px ;
 
-  h3{
+  h2{
     font-weight: 400;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 20px;
+    color: #002B54;
   }
 
   & :nth-child(3) {
