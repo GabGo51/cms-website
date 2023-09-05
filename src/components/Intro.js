@@ -33,7 +33,11 @@ const Container = styled.section`
   h1{
     color: #002B54;
     font-weight: 500;
-    font-size: 3vw;
+    font-size: 2.5em;
+
+    @media(max-width:800px){
+      font-size: 1.5em;
+    }
   }
 `;
 
@@ -43,8 +47,12 @@ padding: 5vw 8vw;
 
 p{
   margin: 25px 0px;
-  font-size: 1.5vw;
+  font-size: 1.2em;
   width: 50vw;
+  @media(max-width:800px){
+      font-size: 0.8em;
+      width: 70vw;
+    }
 }
 `
 

@@ -57,10 +57,19 @@ const NavWrapper = styled.div`
     cursor: pointer;
     border-bottom: 1px solid transparent;
     margin-right: 4vw;
-    &:hover {
-      border-bottom: 1px solid #c2ce21;
-      transform: translateY(-5%);
+    @media (min-width:900px){
+      &:hover {
+        border-bottom: 1px solid #c2ce21;
+        transform: translateY(-5%);
+      }
     }
+    @media (max-width:900px){
+      &:hover {
+        
+        background-color: #DCDCDC ;
+      }
+    }
+
   }
 `;
 
@@ -100,7 +109,11 @@ const Services = styled.nav`
       padding: 10px 20px;
       border-radius: 10px;
       white-space: nowrap;
-      
+      border: 2px solid #A1AC00;
+      &:hover{
+        background-color: white;
+        color: #A1AC00;
+      }
     }
   }
 
@@ -128,7 +141,7 @@ const Services = styled.nav`
       width: 100%;
       /* text-align: center; */
       border-bottom: 1px solid #555;
-
+      
       
     }
 
@@ -141,6 +154,8 @@ const Services = styled.nav`
         border-bottom: none;
         font-weight: 600;
         border-radius: 0px;
+        border: none;
+        padding: 10px;
       }
     }
   }
