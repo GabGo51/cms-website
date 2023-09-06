@@ -7,7 +7,7 @@ const Intro = () => {
     <Container>
       <img src={building}/>
       <Text>
-        <h1>Nous sommes dédiés a la santé des athletes et gens actifs de la région des Laurentides.</h1>
+        <h1>Dédication a la santé des athletes et gens actifs de la région des Laurentides.</h1>
         <p>Nous nous spécialisons dans l’évaluation et le traitement de blessures sportives ainsi que dans le suivi médical préventif d’athlètes de tous âges.</p>
         <p>Nous sommes aussi le centre de référence auprès des médecins de la région pour tout ce qui touche aux pathologies musculo-squelettiques, que ce soit pour préciser un diagnostic, pour orienter un plan de traitement ou pour une infiltration écho-guidée.</p>
         <p>Venez nous voir à l’une de nos deux cliniques : Centre de Médecine Sportive des Laurentides située à St-Jérôme et à la Clinique Sport Santé Laurentides de St-Sauveur.</p>

@@ -17,7 +17,7 @@ const Form = () => {
 
 Pour les soins d'urgence, veuillez appeler <span>450 438-0911</span> </p>
       <button onClick={toggleForm}>Prendre Rendez-vous</button>
-      <i class="fa-solid fa-angle-down" form = {form}></i>
+      <i className="fa-solid fa-angle-down" form = {form}></i>
       {form &&(
         <form>
           <input/>

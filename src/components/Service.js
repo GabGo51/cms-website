@@ -57,12 +57,13 @@ flex-wrap: wrap;
 const Card = styled.div`
 display: flex;
 flex-direction: column;
-width: 400px;
-height: 500px;
+width: 300px;
+height: 400px;
 background-color: white;
 border-radius: 15px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 padding: 20px;
+padding-bottom: 0;
 
 h3{
   margin-bottom: 30px;
@@ -83,6 +84,8 @@ div{
 img{
 
   width: 100%;
+  height: 30%;
+  object-fit: cover;
 }
 `  
    	

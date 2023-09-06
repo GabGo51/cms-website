@@ -4,10 +4,10 @@ import Normal from"./fonts/oy.otf"
 
 export default createGlobalStyle`
 
-@font-face {
-    font-family: Canter;
-    src: url(${Serif});
-  }
+  @font-face {
+      font-family: Canter;
+      src: url(${Serif});
+    }
 
   @font-face {
     font-family: PasCanter;
