@@ -1,10 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 const Location = () => {
-  
-
-  
-
   return (
     <Container>
       <Top>
@@ -15,10 +11,11 @@ const Location = () => {
         </p>
       </Top>
       <iframe
+        title="CMS Location"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4680.808362806224!2d-74.00361897841884!3d45.76285226319088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccf2b950f2292f7%3A0xa1b2f2fc9657e2df!2sCentre%20de%20M%C3%A9decine%20sportive%20des%20Laurentides!5e0!3m2!1sen!2sca!4v1694030872312!5m2!1sen!2sca"
         width="600"
         height="450"
-        style={{border: "0"}}
+        style={{ border: "0" }}
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -44,8 +41,9 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  padding: 100px;
 
-  iframe{
+  iframe {
     width: 80vw;
     margin: 50px 0px;
   }
@@ -70,21 +68,7 @@ const Top = styled.div`
     margin-bottom: 2vw;
   }
 `;
-const Map = styled.div`
-  min-width: 80vw;
 
-  min-height: 500px;
-  @media (max-width: 800px) {
-    min-height: 300px;
-  }
-  background-color: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 25px;
-`;
 const Schedule = styled.div``;
 
 export default Location;

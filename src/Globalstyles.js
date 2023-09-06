@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import Serif from "./fonts/aga.otf"
-import Normal from"./fonts/oy.otf"
+import { createGlobalStyle } from "styled-components";
+import Serif from "./fonts/aga.otf";
+import Normal from "./fonts/oy.otf";
 
 export default createGlobalStyle`
 

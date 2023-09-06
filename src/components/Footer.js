@@ -1,5 +1,5 @@
-import React from 'react'
-import { styled } from 'styled-components'
+import React from "react";
+import { styled } from "styled-components";
 
 const Footer = () => {
   return (
@@ -30,56 +30,47 @@ const Footer = () => {
         <p>Jeudi | 9 AM - 2PM</p>
         <p>Vendredi | 9 AM - 2PM</p>
         <p>Samedi | 9 AM - 2PM</p>
-        
       </Schedule>
-
-
     </Container>
-  )
-}
-const Container  = styled.div`
-display: flex;
+  );
+};
+const Container = styled.div`
+  display: flex;
 
-padding: 5vw;
-justify-content: space-between;
+  padding: 5vw;
+  justify-content: space-between;
 
-h4{
-  font-weight: 600;
-}
+  h4 {
+    font-weight: 600;
+  }
 
-p{
-  color: #A9A9A9;
-  font-size: 0.9em;
-}
-`
+  p {
+    color: #a9a9a9;
+    font-size: 0.9em;
+  }
+`;
 
 const Nav = styled.nav`
+  li {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
 
-
-li{
-  margin-bottom:20px;
-}
-
-@media (max-width: 800px) {
-  display: none;
-
-}
-`
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
 const Content = styled.div`
-margin-bottom: 20px;
-line-height: 20px;
-width: 50vw;
-& :nth-child(3) {
+  margin-bottom: 20px;
+  line-height: 20px;
+  width: 50vw;
+  & :nth-child(3) {
     margin-bottom: 2vw;
-}
-
-
-
-`
+  }
+`;
 
 const Schedule = styled.div`
-line-height: 25px;
-`
+  line-height: 25px;
+`;
 
-
-export default Footer
+export default Footer;
