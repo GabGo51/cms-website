@@ -1,13 +1,26 @@
 import React from "react";
 import { styled, css } from "styled-components";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser"
 
 const Form = () => {
+  const Cmsform = useRef()
   const [form, setForm] = useState(false);
 
   const toggleForm = () => {
     setForm(!form);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    emailjs.sendForm("service_ur9h7eg", "template_m0t003h", Cmsform.current, "IIjHDJtlZvXNDz5yE")
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+   }, function(error) {
+      console.log('FAILED...', error);
+   });
+
+  }
 
   return (
     <Container form={form}>
@@ -20,8 +33,17 @@ const Form = () => {
       <button onClick={toggleForm}>Prendre Rendez-vous</button>
       <i className="fa-solid fa-angle-down" form={form}></i>
       {form && (
-        <form>
-          <input />
+        <form ref={Cmsform} onSubmit={handleSubmit}>
+          <InputBox>
+            <input type="text" name="user_name"/>
+            <input type="email" name="user_email" />
+            <input type="phone" name="user_phone" />
+            
+          </InputBox>
+          
+          <textarea name="message"/>
+          <button disabled = {true} type="submit" value="Send"> Envoyer</button>
+          
         </form>
       )}
     </Container>
@@ -95,7 +117,32 @@ const Container = styled.div`
 
   form {
     margin-top: 30px;
+    display:flex;
+    flex-direction:column ;
+    align-items:center;
+    justify-content:center
   }
 `;
+
+const InputBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+width: 300px;
+
+input{
+  margin: 20px;
+  border-radius: 20px;
+  height: 35px;
+  outline: none;
+  padding: 10px 20px;
+  width: 100%;
+
+}
+
+`
+
+
 
 export default Form;
