@@ -9,6 +9,7 @@ const Team = () => {
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
       </Box>
     </Container>
   );
@@ -31,12 +32,19 @@ const Container = styled.div`
 
 const Box = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   div {
-    width: 10vw;
-    height: 10vw;
+    width: 200px;
+    height: 200px;
     background-color: white;
     margin: 20px 40px;
-    border-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:50%;
+    
+
   }
 `;
 
