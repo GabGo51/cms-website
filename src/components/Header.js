@@ -9,6 +9,17 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToRef = (id) => {
+    const element = document.getElementById(id);
+    console.log(element);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log("hello");
+    }else{
+      console.log("u dumb");
+    }
+  };
+
   return (
     <Container>
       <NavWrapper>
@@ -18,11 +29,11 @@ const Header = () => {
         <Services>
           <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
           <ul className={isOpen ? "open" : ""}>
-            <li>CLINIQUE</li>
-            <li>SERVICES</li>
-            <li>ÉQUIPE</li>
-            <li>LOCALISATION</li>
-            <li>PRENDRE RENDEZ-VOUS</li>
+            <li onClick={() => scrollToRef("intro")}>CLINIQUE</li>
+            <li onClick={() => scrollToRef("service")}>SERVICES</li>
+            <li onClick={() => scrollToRef("team")}>ÉQUIPE</li>
+            <li onClick={() => scrollToRef("location")}>LOCALISATION</li>
+            <li onClick={() => scrollToRef("booking")}>PRENDRE RENDEZ-VOUS</li>
           </ul>
         </Services>
       </NavWrapper>

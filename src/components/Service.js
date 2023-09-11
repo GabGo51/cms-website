@@ -8,7 +8,7 @@ import elbow from "../img/elbow.jpg"
 import feet from "../img/feet.jpg"
 const Service = () => {
   return (
-    <Container>
+    <Container id="service">
       <h2>NOS SERVICES</h2>
       <Box>
         <Card>
@@ -89,10 +89,11 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: 100px;
+  
   h2 {
     font-weight: 400;
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #002b54;
   }
 `;
@@ -103,6 +104,11 @@ const Box = styled.div`
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  /* width: 70vw; */
+
+  /* @media (max-width:1500px){
+    width: 100vw;
+  } */
 `;
 
 const Card = styled.div`

@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 const Location = () => {
   return (
-    <Container>
+    <Container id="location">
       <Top>
         <h2>ICI POUR VOUS AIDER</h2>
 

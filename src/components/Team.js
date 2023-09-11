@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 const Team = () => {
   return (
-    <Container>
+    <Container id="team">
       <h2>NOTRE ÉQUIPE</h2>
       <Box>
         <div></div>

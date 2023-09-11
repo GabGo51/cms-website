@@ -12,11 +12,11 @@ function App() {
   return (
     <Container>
       <Header />
-      <Intro />
-      <Service />
-      <Team />
-      <Location />
-      <Form />
+      <Intro id="intro" />
+      <Service id="service" />
+      <Team id="team" />
+      <Location id="location" />
+      <Form id="booking" />
       <Footer />
     </Container>
   );

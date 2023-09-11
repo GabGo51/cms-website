@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 
 const Intro = () => {
   return (
-    <Container>
+    <Container id="intro">
       <img src={building} alt="Buillding" />
       <Text>
         <h1>
