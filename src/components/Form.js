@@ -24,12 +24,12 @@ const Form = () => {
 
   return (
     <Container id="booking" form={form}>
-      <h2>RENDEZ-VOUS EN LIGNE</h2>
+      <h2>Contacter Nous</h2>
       <p>
-        Remplissez le formulaire ci-dessous et nous vous contacterons dans les
-        plus brefs délais. Pour les soins d'urgence, veuillez appeler{" "}
-        <span>450 438-0911</span>{" "}
+      Notre équipe est là pour vous aider, quels que soient vos besoins..
       </p>
+      <p>Pour les soins d'urgence, veuillez appeler{" "}
+      <span>450 438-0911</span></p>
       <button onClick={toggleForm}>Prendre Rendez-vous</button>
       <i className="fa-solid fa-angle-down" form={form}></i>
       {form && (
@@ -68,8 +68,8 @@ const Container = styled.div`
     line-height: 50px;
     margin-bottom: 35px;
     @media (max-width: 800px) {
-      font-size: 2.5em;
-      max-width: 100vw;
+      font-size: 2em;
+      
     }
   }
   p {

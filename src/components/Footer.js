@@ -2,15 +2,26 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Footer = () => {
+
+  const scrollToRef = (id) => {
+    const element = document.getElementById(id);
+    console.log(element);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log("hello");
+    }else{
+      console.log("u dumb");
+    }
+  };
   return (
     <Container>
       <Nav>
         <ul>
-          <li>Clinique</li>
-          <li>Services</li>
-          <li>Équipe</li>
-          <li>Localisation</li>
-          <li>Rendez-vous</li>
+          <li onClick={() => scrollToRef("intro")}>Clinique</li>
+          <li onClick={() => scrollToRef("service")}>Services</li>
+          <li onClick={() => scrollToRef("team")}>Équipe</li>
+          <li onClick={() => scrollToRef("location")}>Localisation</li>
+          <li onClick={() => scrollToRef("booking")}>Rendez-vous</li>
         </ul>
       </Nav>
       <Content>
@@ -36,24 +47,34 @@ const Footer = () => {
 };
 const Container = styled.div`
   display: flex;
-
-  padding: 5vw;
+  padding: 10px 50px;
   justify-content: space-between;
 
   h4 {
     font-weight: 600;
+    
   }
 
   p {
-    color: #a9a9a9;
+    color: #7C7C7C ;
     font-size: 0.9em;
+    
+  }
+
+  @media (max-width:500px){
+    padding: 10px 20px;
   }
 `;
 
 const Nav = styled.nav`
   li {
     margin-bottom: 20px;
+    transition: 300ms;
     cursor: pointer;
+
+    &:hover{
+      color: #c2ce21;
+    }
   }
 
   @media (max-width: 800px) {

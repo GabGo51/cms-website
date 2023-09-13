@@ -15,17 +15,16 @@ function App() {
       <Intro id="intro" />
       <Service id="service" />
       <Team id="team" />
-      <Location id="location" />
       <Form id="booking" />
+      <Location id="location" />
       <Footer />
     </Container>
   );
 }
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+
+width: 100vw;
 `;
 
 export default App;

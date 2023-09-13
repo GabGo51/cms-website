@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Logo1 from "../img/logo2.gif";
+import Logo1 from "../img/logo1.png";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,10 +43,8 @@ const Header = () => {
 
 const Container = styled.header`  
   width:100%;
-  h1 {
-    font-weight: 500;
-    font-size: 3em;
-  }
+  padding: 10px 0px;
+  background-color: white;
 `;
 
 const NavWrapper = styled.div`
@@ -82,7 +80,7 @@ const NavWrapper = styled.div`
 
 const Logo = styled.div`
   img {
-    width: 13vw;
+    width: 100px;
     height: auto;
     margin-left: 1vw;
     @media (max-width: 500px) {

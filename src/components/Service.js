@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
 import swim from "../img/swim.png";
-import gnou from "../img/gnou.png"
-import injection from "../img/injection.jpg"
-import weights from "../img/weights.png"
-import run from "../img/run.jpg"
-import echo from "../img/echo.jpg"
+import gnou from "../img/gnou.png";
+import injection from "../img/injection.jpg";
+import weights from "../img/weights.png";
+import run from "../img/run.jpg";
+import echo from "../img/echo.jpg";
 const Service = () => {
   return (
     <Container id="service">
@@ -27,12 +27,11 @@ const Service = () => {
             <h3>Suivi pour les athlètes de programmes d’équipes sportives</h3>
             <div className="greenDiv"></div>
             <p>
-              Correction de problèmes biomécaniques. Évaluation de la condition par un
-              physiothérapeute ou un kinésiologue. 
+              Correction de problèmes biomécaniques. Évaluation de la condition
+              par un physiothérapeute ou un kinésiologue.
             </p>
             <img src={swim} alt="swimmming" />
           </Content>
-          
         </Card>
         <Card>
           <Content>
@@ -44,7 +43,6 @@ const Service = () => {
             </p>
             <img src={injection} alt="swimmming" />
           </Content>
-          
         </Card>
         <Card>
           <Content>
@@ -56,7 +54,6 @@ const Service = () => {
             </p>
             <img src={gnou} alt="swimmming" />
           </Content>
-          
         </Card>
         <Card>
           <Content>
@@ -68,7 +65,6 @@ const Service = () => {
             </p>
             <img src={weights} alt="swimmming" />
           </Content>
-          
         </Card>
         <Card>
           <Content>
@@ -80,7 +76,6 @@ const Service = () => {
             </p>
             <img src={run} alt="swimmming" />
           </Content>
-          
         </Card>
       </Box>
     </Container>
@@ -92,12 +87,16 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 100px;
   
+
   h2 {
     font-weight: 600;
     font-size: 3em;
     margin-bottom: 30px;
+
+    @media (max-width:500px){
+      font-size: 2em;
+    }
   }
 `;
 
@@ -149,7 +148,7 @@ const Card = styled.div`
     width: 90%;
   }
 
-  p{
+  p {
     font-size: 0.8em;
     margin-bottom: 15px;
     position: absolute;
@@ -159,15 +158,13 @@ const Card = styled.div`
   }
 
   img {
-    
     width: 321px;
-    height:137px ;
+    height: 137px;
     object-fit: cover;
-    
+
     border-radius: 10px;
     position: absolute;
     bottom: 20px;
-   
   }
 `;
 

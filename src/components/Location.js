@@ -4,11 +4,14 @@ const Location = () => {
   return (
     <Container id="location">
       <Top>
-        <h2>ICI POUR VOUS AIDER</h2>
+        <h2>Localisation</h2>
 
         <p>
           305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9
         </p>
+        <div>
+
+        </div>
       </Top>
       <iframe
         title="CMS Location"
@@ -16,21 +19,11 @@ const Location = () => {
         width="600"
         height="450"
         style={{ border: "0" }}
-        
         loading="lazy"
         
       ></iframe>
 
-      <Schedule>
-        <h4>HORAIRE</h4>
-        <p>Dimanche | 9 AM - 2PM</p>
-        <p>Lundi | 9 AM - 2PM</p>
-        <p>Mardi | 9 AM - 2PM</p>
-        <p>Mercredi | 9 AM - 2PM</p>
-        <p>Jeudi | 9 AM - 2PM</p>
-        <p>Vendredi | 9 AM - 2PM</p>
-        <p>Samedi | 9 AM - 2PM</p>
-      </Schedule>
+      
     </Container>
   );
 };
@@ -40,12 +33,28 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  padding: 100px;
+  
+  padding-top:100px ;
+  h2 {
+    font-weight: 600;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #002b54;
+    @media (max-width:500px){
+      font-size: 2em;
+    }
+  }
+  p{
+    width: 80vw;
+    text-align: center;
+  }
 
   iframe {
-    width: 80vw;
-    margin: 50px 0px;
+    width: 100vw;
+    height: 400px;
+    margin: 20px 0px;
+    filter: grayscale(1) ;
+    
   }
 `;
 
@@ -57,18 +66,13 @@ const Top = styled.div`
   align-items: center;
   margin-bottom: 25px;
 
-  h2 {
-    font-weight: 400;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #002b54;
-  }
+  
 
   & :nth-child(3) {
     margin-bottom: 2vw;
   }
 `;
 
-const Schedule = styled.div``;
+
 
 export default Location;
