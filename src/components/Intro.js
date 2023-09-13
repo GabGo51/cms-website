@@ -29,7 +29,9 @@ const Intro = () => {
         </p>
       </Text>
       <Box>
-        <p>Autre Localisation</p>
+        <div>Autre Localisation</div>
+        <p><span>Venez nous voir à St-Sauveur!</span></p>
+        <p>Nous proposons également nos services ici : <a target="#" href="https://www.cliniquesportsante.com/">Clinique Sport Santé Laurentides de St-Sauveur.</a> </p>
       </Box>
     </Container>
   );
@@ -74,12 +76,16 @@ const Text = styled.div`
 
 const Box = styled.div`
 background-color: #FAFBEB;
-height: 150px;
-width: 80vw;
+min-height: 150px;
+padding: 20px 40px;
+width: 83vw;
 position: relative;
 border: 1px solid  #C7D324;
 margin-bottom: 50px;
-p{
+@media (max-width:500px){
+  width: 88vw;
+  }
+div{
   padding: 7px;
   width: 230px;
   background-color: #A5AA5B;
@@ -93,7 +99,28 @@ p{
   position: absolute;
   top: -20px;
   left: 20px;
-  
+  @media (max-width:500px){
+    font-size: 1em;
+    width: 200px;
+  }
+}
+p{
+  margin-top: 15px;
+}
+
+span{
+  font-family: Poppins;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  @media (max-width:500px){
+    font-size: 1em;
+  }
+}
+
+a{
+  color: black;
 }
 `
 
