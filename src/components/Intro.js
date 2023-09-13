@@ -4,9 +4,9 @@ import { styled } from "styled-components";
 
 const Intro = () => {
   return (
-    <Container id="intro">
+    <Container >
       <img src={building} alt="Buillding" />
-      <Text>
+      <Text id="intro">
         <h1>
           Dédication a la santé des athletes et gens actifs de la région des
           Laurentides.
@@ -28,16 +28,20 @@ const Intro = () => {
           Santé Laurentides de St-Sauveur.
         </p>
       </Text>
+      <Box>
+        <p>Autre Localisation</p>
+      </Box>
     </Container>
   );
 };
 
 const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  }
+  
   img {
     width: 100vw;
   }
@@ -55,7 +59,7 @@ const Container = styled.section`
 
 const Text = styled.div`
   width: 100vw;
-  padding: 5vw 8vw;
+  padding: 5vw 9vw;
 
   p {
     margin: 25px 0px;
@@ -67,5 +71,30 @@ const Text = styled.div`
     }
   }
 `;
+
+const Box = styled.div`
+background-color: #FAFBEB;
+height: 150px;
+width: 80vw;
+position: relative;
+border: 1px solid  #C7D324;
+margin-bottom: 50px;
+p{
+  padding: 7px;
+  width: 230px;
+  background-color: #A5AA5B;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  
+}
+`
 
 export default Intro;

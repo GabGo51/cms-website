@@ -1,15 +1,15 @@
 import React from "react";
 import { styled } from "styled-components";
-import swim from "../img/swim.jpg";
-import gnou from "../img/gnou.jpg"
+import swim from "../img/swim.png";
+import gnou from "../img/gnou.png"
 import injection from "../img/injection.jpg"
-import weights from "../img/weights.jpg"
-import elbow from "../img/elbow.jpg"
-import feet from "../img/feet.jpg"
+import weights from "../img/weights.png"
+import run from "../img/run.jpg"
+import echo from "../img/echo.jpg"
 const Service = () => {
   return (
     <Container id="service">
-      <h2>NOS SERVICES</h2>
+      <h2>Nos Services</h2>
       <Box>
         <Card>
           <Content>
@@ -19,64 +19,68 @@ const Service = () => {
               Sur référence de votre médecin.Évaluation et traitement de
               blessures musculo-squelettiques, soit occasionées par l’activité …
             </p>
+            <img src={echo} alt="swimmming" />
           </Content>
-          <img src={swim} alt="swimmming" />
         </Card>
         <Card>
           <Content>
-            <h3>Clinique d'Arthrose</h3>
+            <h3>Suivi pour les athlètes de programmes d’équipes sportives</h3>
             <div className="greenDiv"></div>
             <p>
               Correction de problèmes biomécaniques. Évaluation de la condition par un
-              physiothérapeute ou un kinésiologue. Injections de viscosuppléance
-              ou de corticostéroïdes
+              physiothérapeute ou un kinésiologue. 
             </p>
+            <img src={swim} alt="swimmming" />
           </Content>
-          <img src={gnou} alt="swimmming" />
+          
         </Card>
         <Card>
           <Content>
-            <h3>Injection de cortisone et de viscosuppléance sous guidage échographique</h3>
+            <h3>Injection de cortisone sous guidage échographique</h3>
             <div className="greenDiv"></div>
             <p>
               Sur référence de votre médecin.Évaluation et traitement de
               blessures musculo-squelettiques, soit occasionées par l’activité …
             </p>
+            <img src={injection} alt="swimmming" />
           </Content>
-          <img src={injection} alt="swimmming" />
+          
         </Card>
         <Card>
           <Content>
-            <h3>Clinique d’évaluation de la condition physique chez le Sportif</h3>
+            <h3>Clinique d’arthrose</h3>
             <div className="greenDiv"></div>
             <p>
               Sur référence de votre médecin.Évaluation et traitement de
               blessures musculo-squelettiques, soit occasionées par l’activité …
             </p>
+            <img src={gnou} alt="swimmming" />
           </Content>
-          <img src={weights} alt="swimmming" />
+          
         </Card>
         <Card>
           <Content>
-            <h3>Clinique d’évaluation de la condition physique chez le Sportif</h3>
+            <h3>Évaluation de la condition physique chez le Sportif</h3>
             <div className="greenDiv"></div>
             <p>
               Sur référence de votre médecin.Évaluation et traitement de
               blessures musculo-squelettiques, soit occasionées par l’activité …
             </p>
+            <img src={weights} alt="swimmming" />
           </Content>
-          <img src={elbow} alt="swimmming" />
+          
         </Card>
         <Card>
           <Content>
-            <h3>Clinique d’évaluation de la condition physique chez le Sportif</h3>
+            <h3>Clinique d’évaluation du coureur</h3>
             <div className="greenDiv"></div>
             <p>
               Sur référence de votre médecin.Évaluation et traitement de
               blessures musculo-squelettiques, soit occasionées par l’activité …
             </p>
+            <img src={run} alt="swimmming" />
           </Content>
-          <img src={feet} alt="swimmming" />
+          
         </Card>
       </Box>
     </Container>
@@ -91,10 +95,9 @@ const Container = styled.div`
   padding-bottom: 100px;
   
   h2 {
-    font-weight: 400;
-    font-size: 2em;
-    margin-bottom: 40px;
-    color: #002b54;
+    font-weight: 600;
+    font-size: 3em;
+    margin-bottom: 30px;
   }
 `;
 
@@ -114,11 +117,10 @@ const Box = styled.div`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350px;
-  height: 100%;
+  width: 365px;
+  height: 330px;
   background-color: white;
-  border-radius: 20px;
-  padding-bottom: 0;
+  border-radius: 10px;
   border: 1.8px solid #ededed;
   transition: 300ms;
 
@@ -127,7 +129,10 @@ const Card = styled.div`
   }
 
   h3 {
-    margin-bottom: 30px;
+    height: 51px;
+    width: 321px;
+    font-weight: 600;
+    font-size: 1em;
   }
 
   .greenDiv {
@@ -135,23 +140,34 @@ const Card = styled.div`
     height: 3px;
     width: 40%;
     transition: 0.5s;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 80px;
   }
 
   &:hover .greenDiv {
-    width: 100%;
+    width: 90%;
   }
 
   p{
     font-size: 0.8em;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 100px;
+    width: 321px;
+    height: 102px;
   }
 
   img {
-    width: 100%;
-    height: 200px;
+    
+    width: 321px;
+    height:137px ;
     object-fit: cover;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+   
   }
 `;
 
@@ -159,7 +175,8 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 250px;
+  height: 380px;
+  position: relative;
 `;
 
 export default Service;
