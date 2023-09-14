@@ -16,17 +16,7 @@ const Intro = () => {
           sportives ainsi que dans le suivi médical préventif d’athlètes de tous
           âges.
         </p>
-        <p>
-          Nous sommes aussi le centre de référence auprès des médecins de la
-          région pour tout ce qui touche aux pathologies musculo-squelettiques,
-          que ce soit pour préciser un diagnostic, pour orienter un plan de
-          traitement ou pour une infiltration écho-guidée.
-        </p>
-        <p>
-          Venez nous voir à l’une de nos deux cliniques : Centre de Médecine
-          Sportive des Laurentides située à St-Jérôme et à la Clinique Sport
-          Santé Laurentides de St-Sauveur.
-        </p>
+        
       </Text>
       <Box>
         <div>Autre Localisation</div>
@@ -75,12 +65,13 @@ const Text = styled.div`
 `;
 
 const Box = styled.div`
-background-color: #FAFBEB;
+background-color: rgba(12, 96, 242, 0.10);
 min-height: 150px;
 padding: 20px 40px;
+border-radius: 10px;
 width: 83vw;
 position: relative;
-border: 1px solid  #C7D324;
+border: 1px solid  #0C60F2;
 margin-bottom: 50px;
 @media (max-width:500px){
   width: 88vw;
@@ -88,7 +79,7 @@ margin-bottom: 50px;
 div{
   padding: 7px;
   width: 230px;
-  background-color: #A5AA5B;
+  background-color: #0C60F2;
   border-radius: 30px;
   font-size: 1.2em;
   font-weight: 600;

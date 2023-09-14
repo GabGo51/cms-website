@@ -87,11 +87,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  margin-bottom: 100px;
 
   h2 {
     font-weight: 600;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 30px;
 
     @media (max-width:500px){
@@ -120,11 +120,11 @@ const Card = styled.div`
   height: 330px;
   background-color: white;
   border-radius: 10px;
-  border: 1.8px solid #ededed;
+  border: 2px solid #ededed;
   transition: 300ms;
 
   &:hover {
-    border: 1.8px solid #a1ac00;
+    border: 2px solid #0C60F2;
   }
 
   h3 {
@@ -135,7 +135,7 @@ const Card = styled.div`
   }
 
   .greenDiv {
-    background-color: #a1ac00;
+    background-color: #0C60F2;
     height: 3px;
     width: 40%;
     transition: 0.5s;

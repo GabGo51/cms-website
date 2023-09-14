@@ -66,7 +66,7 @@ const NavWrapper = styled.div`
     margin-right: 4vw;
     @media (min-width: 900px) {
       &:hover {
-        border-bottom: 1px solid #c2ce21;
+        border-bottom: 1px solid #0C60F2;
         transform: translateY(-5%);
       }
     }
@@ -107,16 +107,16 @@ const Services = styled.nav`
     display: flex;
 
     li:last-child {
-      background-color: #a1ac00;
+      background-color: #0C60F2;
       color: white;
       font-weight: 600;
       padding: 10px 20px;
       border-radius: 10px;
       white-space: nowrap;
-      border: 2px solid #a1ac00;
+      border: 2px solid #0C60F2;
       &:hover {
         background-color: white;
-        color: #a1ac00;
+        color: #0C60F2;
       }
     }
   }
