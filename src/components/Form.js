@@ -1,71 +1,90 @@
 import React from "react";
-import { styled} from "styled-components";
+import { styled } from "styled-components";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import loadingCircle from "../img/loading.gif"
 
 const Form = () => {
   const Cmsform = useRef();
   const [neww, setNeww] = useState(false);
-  const [old, setOld] = useState(false)
+  const [old, setOld] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false)
 
   const toggleNew = () => {
     setNeww(!neww);
-    setOld(false)
+    setOld(false);
   };
 
   const toggleOld = () => {
     setOld(!old);
-    setNeww(false)
+    setNeww(false);
     console.log("hehe");
   };
 
   const handleSubmit = (e) => {
     //do an if statement depending on the state and use a different template
     e.preventDefault();
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false)
+      setSent(true)
+      setNeww(false)
+      setOld(false)
 
-    if (neww){
-      emailjs
-      .sendForm(
-        "service_ur9h7eg",
-        "template_m0t003h",
-        Cmsform.current,
-        "IIjHDJtlZvXNDz5yE"
-      )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          console.log("new");
-          Cmsform.current.reset();
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-    }
-    if(old){
-      emailjs
-      .sendForm(
-        "service_ur9h7eg",
-        "template_5qhwo5l",
-        Cmsform.current,
-        "IIjHDJtlZvXNDz5yE"
-      )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          console.log("old");
-          Cmsform.current.reset();
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-    }
-    
+      setTimeout(()=>{
+        setSent(false)
+      }, 5000)
+    }, 2000)
+
+    // if (neww) {
+    //   emailjs
+    //     .sendForm(
+    //       "service_ur9h7eg",
+    //       "template_m0t003h",
+    //       Cmsform.current,
+    //       "IIjHDJtlZvXNDz5yE"
+    //     )
+    //     .then(
+    //       function (response) {
+    //         setLoading(false);
+    //         setNeww(false)
+    //         console.log("SUCCESS!", response.status, response.text);
+    //         console.log("new");
+    //         Cmsform.current.reset();
+    //         setSent(true)
+    //       },
+    //       function (error) {
+    //         console.log("FAILED...", error);
+    //       }
+    //     );
+    // }
+    // if (old) {
+    //   emailjs
+    //     .sendForm(
+    //       "service_ur9h7eg",
+    //       "template_5qhwo5l",
+    //       Cmsform.current,
+    //       "IIjHDJtlZvXNDz5yE"
+    //     )
+    //     .then(
+    //       function (response) {
+    //         setLoading(false);
+    //         setOld(false)
+    //         console.log("SUCCESS!", response.status, response.text);
+    //         console.log("old");
+    //         Cmsform.current.reset();
+    //         setSent(true)
+    //       },
+    //       function (error) {
+    //         console.log("FAILED...", error);
+    //       }
+    //     );
+    // }
   };
 
   return (
-    <Container neww = {neww} old = {old}id="booking" >
+    <Container neww={neww} old={old} id="booking">
       <Box>
         <h2>Contacter Nous</h2>
         <p>
@@ -75,21 +94,29 @@ const Form = () => {
           Pour les soins d'urgence, veuillez appeler{" "}
           <a href="tel:450-438-0911">450 438-0911</a>
         </p>
-        <div>
+        <ButtonContainer>
           <button onClick={toggleNew}>New Client</button>
           <button onClick={toggleOld}>Old Client</button>
-        </div>
-        
-        <i className="fa-solid fa-angle-down"  style={{ transform: neww || old ? "rotate(180deg)" : "rotate(0deg)" }}></i>
+        </ButtonContainer>
+
+        <i
+          className="fa-solid fa-angle-down"
+          style={{ transform: neww || old ? "rotate(180deg)" : "rotate(0deg)" }}
+        ></i>
+        {sent &&(
+          <SentMessage>
+            Votre requete est envoyé! Nous allons vous contactez dans les plus bref délai. 
+          </SentMessage>
+        )}
         {neww && (
-          <form neww = {neww} ref={Cmsform} onSubmit={handleSubmit}>
+          <form neww={neww} ref={Cmsform} onSubmit={handleSubmit}>
             <InputBox>
               <div>
-                <label  for="prenom">Prénom</label>
+                <label for="prenom">Prénom</label>
                 <input required type="text" name="user_name" />
               </div>
               <div>
-                <label  for="nomdefamille">Nom de famille</label>
+                <label for="nomdefamille">Nom de famille</label>
                 <input required type="text" name="user_lname" />
               </div>
               <div>
@@ -102,34 +129,44 @@ const Form = () => {
               </div>
             </InputBox>
             <div>
-              <label for="message">Décrivez la raison de votre rendez-vous</label>
+              <label for="message">
+                Décrivez la raison de votre rendez-vous
+              </label>
               <textarea required name="message" />
             </div>
-            
-            <button  type="submit" value="Send">
-              {" "}
-              Envoyer
-            </button>
+            {loading ? (
+              <button type="submit" value="Send">
+                {" "}
+                <Loading src={loadingCircle}/>
+              </button>
+            ) : (
+              <button type="submit" value="Send">
+                {" "}
+                Envoyer
+              </button>
+            )}
           </form>
         )}
         {old && (
-          <form old = {old}  ref={Cmsform} onSubmit={handleSubmit}>
+          <form old={old} ref={Cmsform} onSubmit={handleSubmit}>
             <InputBox>
               <div>
-                <label  for="prenom">Prénom</label>
+                <label for="prenom">Prénom</label>
                 <input required type="text" name="user_name" />
               </div>
               <div>
-                <label  for="nomdefamille">Nom de famille</label>
+                <label for="nomdefamille">Nom de famille</label>
                 <input required type="text" name="user_lname" />
               </div>
             </InputBox>
             <div>
-              <label for="message">Décrivez la raison de votre rendez-vous</label>
+              <label for="message">
+                Décrivez la raison de votre rendez-vous
+              </label>
               <textarea required name="message" />
             </div>
-            
-            <button  type="submit" value="Send">
+
+            <button type="submit" value="Send">
               {" "}
               Envoyer
             </button>
@@ -151,7 +188,7 @@ const Container = styled.div`
 const Box = styled.div`
   width: 85vw;
   border-radius: 30px;
-  background-color: rgba(12, 96, 242, 0.10);
+  background-color: rgba(12, 96, 242, 0.1);
   color: #252b42;
   display: flex;
   flex-direction: column;
@@ -160,8 +197,8 @@ const Box = styled.div`
   padding: 100px 0px;
   transition: 0.4s;
   @media (max-width: 800px) {
-      width: 100vw;
-    }
+    width: 100vw;
+  }
   h2 {
     font-weight: 600;
     font-size: 2.5em;
@@ -189,6 +226,11 @@ const Box = styled.div`
   }
 
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 55px;
     background-color: #0c60f2;
     color: white;
     padding: 15px 30px;
@@ -210,8 +252,6 @@ const Box = styled.div`
   i {
     color: #0c60f2;
     scale: 1.5;
-    
-    
   }
 
   form {
@@ -238,12 +278,11 @@ const Box = styled.div`
       padding: 10px 20px;
       width: 100%;
 
-      &:focus{
-        outline: 2px solid  rgba(12, 96, 242, 0.20);
+      &:focus {
+        outline: 2px solid rgba(12, 96, 242, 0.2);
       }
-      
     }
-    div{
+    div {
       width: 100%;
     }
 
@@ -255,13 +294,27 @@ const Box = styled.div`
       border-radius: 5px;
       margin-bottom: 20px;
       resize: none;
-      &:focus{
-        outline: 2px solid  rgba(12, 96, 242, 0.20);
+      &:focus {
+        outline: 2px solid rgba(12, 96, 242, 0.2);
       }
-
     }
   }
 `;
+
+const ButtonContainer = styled.div`
+display: flex;
+`
+
+const SentMessage = styled.div`
+margin-top: 50px;
+background-color: white;
+width: 80%;
+border-radius: 30px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+`  
 
 const InputBox = styled.div`
   display: flex;
@@ -271,7 +324,6 @@ const InputBox = styled.div`
   flex-wrap: wrap;
 
   div {
-    
     flex-basis: 48%;
     margin-bottom: 10px;
     @media (max-width: 500px) {
@@ -279,5 +331,10 @@ const InputBox = styled.div`
     }
   }
 `;
+
+const Loading = styled.img`
+
+scale: 0.25;
+`
 
 export default Form;
