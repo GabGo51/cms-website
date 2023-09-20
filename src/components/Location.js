@@ -53,8 +53,6 @@ const Container = styled.section`
     width: 100vw;
     height: 400px;
     margin: 20px 0px;
-    filter: grayscale(1) ;
-    
   }
 `;
 

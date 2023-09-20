@@ -28,9 +28,9 @@ const Footer = () => {
         <h4>Centre de médecine sportive des Laurentides</h4>
         <p>305, rue du Docteur Charles Léonard, Suite 200</p>
         <p>St-Jérôme, Qc, J7Y 0M9</p>
-        <p>Téléphone : 450 438-0911</p>
-        <p>FAX : 450 436-2719</p>
-        <p>Email: </p>
+        <p>Téléphone :<a href="tel:450-438-0911"> 450 438-0911</a></p>
+        <p>FAX : <span>450 436-2719 </span> </p>
+        <p>Email: <span>123emailahah@gmail.com</span></p>
       </Content>
       <Schedule>
         <h4>HORAIRE</h4>
@@ -87,6 +87,12 @@ const Content = styled.div`
   width: 50vw;
   & :nth-child(3) {
     margin-bottom: 2vw;
+  }
+  span{
+    color: #0c60f2;
+  }
+  a{
+    text-decoration: none;
   }
 `;
 
