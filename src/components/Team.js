@@ -114,6 +114,10 @@ const CardBox = styled.div`
 `;
 
 const TextBox = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 background-color:rgba(12, 96, 242, 0.10) ;
 padding-bottom: 20px;
 border-bottom-right-radius: 50px;

@@ -138,7 +138,8 @@ const Card = styled.div`
   height: 330px;
   background-color: white;
   border-radius: 10px;
-  border: 2px solid #ededed;
+  margin-bottom: 10px;
+  border: 2px solid #DBDBDB;
   transition: 300ms;
 
   &:hover {
