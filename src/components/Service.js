@@ -9,74 +9,82 @@ import echo from "../img/echo.jpg";
 const Service = () => {
   return (
     <Container id="service">
-      <h2>Nos Services</h2>
       <Box>
-        <Card>
-          <Content>
-            <h3>Consultation musculo-squeletique</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Sur référence de votre médecin.Évaluation et traitement de
-              blessures musculo-squelettiques, soit occasionées par l’activité …
-            </p>
-            <img src={echo} alt="swimmming" />
-          </Content>
-        </Card>
-        <Card>
-          <Content>
-            <h3>Suivi pour les athlètes de programmes d’équipes sportives</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Correction de problèmes biomécaniques. Évaluation de la condition
-              par un physiothérapeute ou un kinésiologue.
-            </p>
-            <img src={swim} alt="swimmming" />
-          </Content>
-        </Card>
-        <Card>
-          <Content>
-            <h3>Injection de cortisone sous guidage échographique</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Sur référence de votre médecin.Évaluation et traitement de
-              blessures musculo-squelettiques, soit occasionées par l’activité …
-            </p>
-            <img src={injection} alt="swimmming" />
-          </Content>
-        </Card>
-        <Card>
-          <Content>
-            <h3>Clinique d’arthrose</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Sur référence de votre médecin.Évaluation et traitement de
-              blessures musculo-squelettiques, soit occasionées par l’activité …
-            </p>
-            <img src={gnou} alt="swimmming" />
-          </Content>
-        </Card>
-        <Card>
-          <Content>
-            <h3>Évaluation de la condition physique chez le Sportif</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Sur référence de votre médecin.Évaluation et traitement de
-              blessures musculo-squelettiques, soit occasionées par l’activité …
-            </p>
-            <img src={weights} alt="swimmming" />
-          </Content>
-        </Card>
-        <Card>
-          <Content>
-            <h3>Clinique d’évaluation du coureur</h3>
-            <div className="greenDiv"></div>
-            <p>
-              Sur référence de votre médecin.Évaluation et traitement de
-              blessures musculo-squelettiques, soit occasionées par l’activité …
-            </p>
-            <img src={run} alt="swimmming" />
-          </Content>
-        </Card>
+        <p className="intro">Découvrez</p>
+        <h2>Nos Services</h2>
+        <CardBox>
+          <Card>
+            <Content>
+              <h3>Consultation musculo-squeletique</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Sur référence de votre médecin.Évaluation et traitement de
+                blessures musculo-squelettiques, soit occasionées par l’activité
+                …
+              </p>
+              <img src={echo} alt="swimmming" />
+            </Content>
+          </Card>
+          <Card>
+            <Content>
+              <h3>Suivi pour les athlètes de programmes d’équipes sportives</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Correction de problèmes biomécaniques. Évaluation de la
+                condition par un physiothérapeute ou un kinésiologue.
+              </p>
+              <img src={swim} alt="swimmming" />
+            </Content>
+          </Card>
+          <Card>
+            <Content>
+              <h3>Injection de cortisone sous guidage échographique</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Sur référence de votre médecin.Évaluation et traitement de
+                blessures musculo-squelettiques, soit occasionées par l’activité
+                …
+              </p>
+              <img src={injection} alt="swimmming" />
+            </Content>
+          </Card>
+          <Card>
+            <Content>
+              <h3>Clinique d’arthrose</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Sur référence de votre médecin.Évaluation et traitement de
+                blessures musculo-squelettiques, soit occasionées par l’activité
+                …
+              </p>
+              <img src={gnou} alt="swimmming" />
+            </Content>
+          </Card>
+          <Card>
+            <Content>
+              <h3>Évaluation de la condition physique chez le Sportif</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Sur référence de votre médecin.Évaluation et traitement de
+                blessures musculo-squelettiques, soit occasionées par l’activité
+                …
+              </p>
+              <img src={weights} alt="swimmming" />
+            </Content>
+          </Card>
+          <Card>
+            <Content>
+              <h3>Clinique d’évaluation du coureur</h3>
+              <div className="greenDiv"></div>
+              <p>
+                Sur référence de votre médecin.Évaluation et traitement de
+                blessures musculo-squelettiques, soit occasionées par l’activité
+                …
+              </p>
+              <img src={run} alt="swimmming" />
+            </Content>
+          </Card>
+        </CardBox>
       </Box>
     </Container>
   );
@@ -84,9 +92,22 @@ const Service = () => {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .intro{
+    color:#0c60f2 ;
+    font-weight: 800;
+    font-size: 14px;
+  }
+`;
+
+const Box = styled.div`
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  
+  
   margin-bottom: 100px;
 
   h2 {
@@ -94,23 +115,20 @@ const Container = styled.div`
     font-size: 2.5em;
     margin-bottom: 30px;
 
-    @media (max-width:500px){
+    @media (max-width: 500px) {
       font-size: 2em;
     }
   }
 `;
 
-const Box = styled.div`
+const CardBox = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
+  gap: 20px;
   flex-wrap: wrap;
-  /* width: 70vw; */
-
-  /* @media (max-width:1500px){
-    width: 100vw;
-  } */
+  width: 80vw;
+  
 `;
 
 const Card = styled.div`
@@ -124,7 +142,7 @@ const Card = styled.div`
   transition: 300ms;
 
   &:hover {
-    border: 2px solid #0C60F2;
+    border: 2px solid #0c60f2;
   }
 
   h3 {
@@ -135,7 +153,7 @@ const Card = styled.div`
   }
 
   .greenDiv {
-    background-color: #0C60F2;
+    background-color: #0c60f2;
     height: 3px;
     width: 40%;
     transition: 0.5s;

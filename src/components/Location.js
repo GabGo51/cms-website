@@ -4,14 +4,22 @@ const Location = () => {
   return (
     <Container id="location">
       <Top>
+        <p className="intro">Venez nous Voir</p>
         <h2>Localisation</h2>
 
-        <p>
+        <p className="adresse">
           305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9
         </p>
-        <div>
-
-        </div>
+        <IconBox>
+          <div>
+            <p className="icon">P</p>
+            <p>Parking disponible</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-wheelchair"></i>
+            <p>Accessible</p>
+          </div>
+        </IconBox>
       </Top>
       <iframe
         title="CMS Location"
@@ -20,10 +28,7 @@ const Location = () => {
         height="450"
         style={{ border: "0" }}
         loading="lazy"
-        
       ></iframe>
-
-      
     </Container>
   );
 };
@@ -33,26 +38,23 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  padding-top:100px ;
+
+  padding-top: 100px;
   h2 {
     font-weight: 600;
     font-size: 3em;
     margin-bottom: 20px;
-    color: #002b54;
-    @media (max-width:500px){
+  
+    @media (max-width: 500px) {
       font-size: 2em;
     }
   }
-  p{
-    width: 80vw;
-    text-align: center;
-  }
+ 
 
   iframe {
     width: 100vw;
     height: 400px;
-    margin: 20px 0px;
+    margin-top: 30px;
   }
 `;
 
@@ -64,13 +66,41 @@ const Top = styled.div`
   align-items: center;
   margin-bottom: 25px;
 
-  
-
   & :nth-child(3) {
     margin-bottom: 2vw;
   }
+
+  .intro {
+    color: #0c60f2;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .adresse {
+    margin: 0;
+  }
 `;
 
+const IconBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon{
+    font-size: 1.2em;
+    font-weight: 900;
+    margin-right: 25px;
+  }
+
+  i{
+    margin-right: 50px;
+  }
+`;
 
 export default Location;

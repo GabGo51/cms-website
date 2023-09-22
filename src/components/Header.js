@@ -14,9 +14,9 @@ const Header = () => {
     console.log(element);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      console.log("hello");
+      
     }else{
-      console.log("u dumb");
+      
     }
   };
 
@@ -82,7 +82,7 @@ const Logo = styled.div`
   img {
     width: 100px;
     height: auto;
-    margin-left: 1vw;
+    margin-left: 3vw;
     @media (max-width: 500px) {
       width: 20vw;
     }

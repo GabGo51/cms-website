@@ -5,9 +5,11 @@ import { styled } from "styled-components";
 const Team = () => {
   return (
     <Container id="team">
-      <h2>Notre Équipe</h2>
-      <p>Le Centre de Médecine Sportive des Laurentides regroupe une équipe de 4 Médecins passionnés de médecine sportive.</p>
       <Box>
+      <p className="intro">Rencontrez</p>
+      <h2>Notre Équipe</h2>
+      <p>Le Centre de medecine Sportive des Laurentides regroupe une équipe de 4 medecins passionnés de médecine sportive.</p>
+      <CardBox>
         <TeamCard>
           <img src={marc} alt="profileigm"/>
           <TextBox>
@@ -37,19 +39,35 @@ const Team = () => {
           </TextBox> 
         </TeamCard>
         
+      </CardBox>
+
       </Box>
+      
     </Container>
   );
 };
 
 const Container = styled.div`
   display: flex;
-  text-align: center;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  margin-bottom: 100px;
+
+  
+  
+`;
+
+const Box = styled.div`
+display: flex;
+flex-direction: column;
+padding-bottom: 100px;
+
+width: 85vw;
+.intro{
+    font-size: 14px;
+    font-weight: 800;
+    color: #0c60f2;
+    margin-bottom: 10px;
+  }
   h2 {
     font-weight: 600;
     font-size: 2.5em;
@@ -60,20 +78,19 @@ const Container = styled.div`
   }
   p{
     max-width: 650px;
-    text-align: center;
+    
     margin-bottom: 40px;
   }
-  
-`;
+`
 
 const TeamCard = styled.div`
 margin: 10px;
 `
 
-const Box = styled.div`
+const CardBox = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   
   img {

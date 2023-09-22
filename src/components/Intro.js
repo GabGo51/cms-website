@@ -46,8 +46,9 @@ const Container = styled.section`
 `;
 
 const Text = styled.div`
-  width: 100vw;
-  padding: 5vw 9vw;
+  width: 85vw;
+  margin: 100px 0px;
+  
 
   p {
     margin: 25px 0px;

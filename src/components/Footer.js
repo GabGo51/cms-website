@@ -47,8 +47,9 @@ const Footer = () => {
 };
 const Container = styled.div`
   display: flex;
-  padding: 10px 50px;
+  padding: 3vw 10vw;
   justify-content: space-between;
+  background-color:rgb(203, 203, 203, 0.5);
 
   h4 {
     font-weight: 600;

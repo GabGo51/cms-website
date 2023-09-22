@@ -32,7 +32,7 @@ export default createGlobalStyle`
 
   html, body {
     width: 100vw;
-    background-color:#F0F0F0;
+    
   }
   
 
