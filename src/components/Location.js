@@ -60,11 +60,11 @@ const Container = styled.section`
 
 const Top = styled.div`
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+ 
 
   & :nth-child(3) {
     margin-bottom: 2vw;
@@ -74,9 +74,10 @@ const Top = styled.div`
     color: #0c60f2;
     font-size: 14px;
     font-weight: 800;
+    margin-bottom: 10px;
   }
   .adresse {
-    margin: 0;
+    margin-bottom:40px ;
   }
 `;
 
@@ -90,16 +91,19 @@ const IconBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 15px;
+    width: 200px;
+    transform: translateX(5%);
   }
 
   .icon{
     font-size: 1.2em;
     font-weight: 900;
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   i{
-    margin-right: 50px;
+    margin-right: 30px;
   }
 `;
 

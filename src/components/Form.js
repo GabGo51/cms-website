@@ -329,29 +329,30 @@ const Box = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 55px;
+    width: 170px;
+    
     background-color: #0c60f2;
     color: white;
-    padding: 15px 30px;
+    padding: 5px 30px;
     border: 2px solid #0c60f2;
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
     margin-bottom: 10px;
     transition: 0.4s;
-    font-size: 0.8em;
+    font-size: 16px;
     margin: 10px;
 
     &:hover {
       transform: translateY(5%);
-      scale: 1.05;
+      scale: 1.03;
     }
   }
 
   i {
     color: #0c60f2;
     scale: 1.5;
+    margin-top: 20px;
   }
 
   form {
@@ -405,6 +406,10 @@ const Box = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
+  
+  button{
+    margin: 1vw 4.7vw;
+  }
 `;
 
 const SentMessage = styled.div`

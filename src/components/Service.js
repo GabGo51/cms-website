@@ -125,7 +125,7 @@ const CardBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   width: 80vw;
   
