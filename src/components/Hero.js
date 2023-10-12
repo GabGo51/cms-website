@@ -53,6 +53,9 @@ h1{
   color: white;
   margin-bottom: 40px;
   font-family: Poppins;
+  @media (max-width: 850px) {
+      font-size: 1.5em;
+    }
 }
 button {
   background-color: white;
@@ -92,36 +95,37 @@ margin-top: 70px;
 `
 
 const ImageBox = styled.div`
-position: relative;
-
-img{
-  display: block;
-  width: 340px;
   position: relative;
-  z-index: 200;
-}
-.design{
-  position: absolute;
-  top: 20px;
-  left: -10px;
-  
-}
-.green{
-  width: 275px;
-  height: 100px;
-  background-color: #C7D324;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  margin-bottom: 15px;
 
-}
+  img{
+    display: block;
+    width: 340px;
+    
+    position: relative;
+    z-index: 200;
+  }
+  .design{
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    
+  }
+  .green{
+    width: 275px;
+    height: 100px;
+    background-color: #C7D324;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 15px;
 
-.white{
-  width: 365px;
-  height: 375px;
-  background-color: white;
-  border-top-right-radius: 30%;
-  border-bottom-left-radius: 30%;
-}
+  }
+
+  .white{
+    width: 365px;
+    height: 375px;
+    background-color: white;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+  }
 
 `

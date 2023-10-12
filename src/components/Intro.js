@@ -23,19 +23,9 @@ const Container = styled.section`
   width: 100vw;
 
   
-  img {
-    width: 100vw;
-  }
+  
 
-  h1 {
-    color: #002b54;
-    font-weight: 500;
-    font-size: 2.5em;
-
-    @media (max-width: 800px) {
-      font-size: 1.5em;
-    }
-  }
+  
 `;
 
 const Text = styled.div`
