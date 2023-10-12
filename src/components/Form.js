@@ -107,7 +107,7 @@ const Form = () => {
         {sent && (
           <SentMessage>
             <p>
-              Votre requete est<span> envoyé </span>! Nous allons vous contactez
+              Votre requête est<span> envoyée </span>! Nous allons vous contacter
               dans les plus bref délai.
             </p>
           </SentMessage>
@@ -165,13 +165,22 @@ const Form = () => {
               </div>
               <div className="select-box">
                 <label> Avez-vous une demande de consultation ? </label>
-                <select className="select" required name="user_consultation">
-                  <option value="Aucune">Aucune</option>
-                  <option value="Physio">Physiothérapeute</option>
-                  <option value="Ostéo">Ostéothérapeutre</option>
-                  <option value="Chiro">Chiropracteur</option>
-                  <option value="Autres">Autres</option>
-                </select>
+                <div className="radio">
+                  <label>Oui</label>
+                  <input
+                    type="radio"
+                    id="accidentSportifYes"
+                    name="user_consultation"
+                    value="oui"
+                  />
+                  <label>Non</label>
+                  <input
+                    type="radio"
+                    id="accidentSportifNo"
+                    name="user_consultation"
+                    value="Non"
+                  />
+                </div>
               </div>
               
               <div>
@@ -280,7 +289,7 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  width: 85vw;
+  width: 70vw;
   border-radius: 30px;
   background-color: #CBDEFF;
   color: #252b42;
@@ -290,7 +299,7 @@ const Box = styled.div`
   justify-content: center;
   padding: 100px 0px;
   transition: 0.4s;
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 100vw;
   }
   .intro{
@@ -361,8 +370,12 @@ const Box = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 70vw;
+    width: 60vw;
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+
+    @media (max-width: 850px){
+      width: 90vw;
+    }
 
     label {
       font-size: 1em;
@@ -435,7 +448,7 @@ const SentMessage = styled.div`
 const InputBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-
+  
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -451,7 +464,9 @@ const InputBox = styled.div`
     display: flex;
     align-items: center;
     width: 100px;
-    
+    input{
+      margin-right: 10px;
+    }
   }
   .select-box {
     display: flex;
@@ -465,6 +480,7 @@ const InputBox = styled.div`
     padding: 5px 20px;
     border-radius: 5px;
     background-color: white;
+    
     &:focus {
       outline: 2px solid rgba(12, 96, 242, 0.2);
     }

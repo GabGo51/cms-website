@@ -103,20 +103,22 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  width: 85vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
-  
-  
   margin-bottom: 100px;
+  @media (max-width: 850px) {
+      width: 90vw;
+  }
 
   h2 {
     font-weight: 600;
     font-size: 2.5em;
     margin-bottom: 30px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 850px) {
       font-size: 2em;
+
     }
   }
 `;
@@ -124,21 +126,27 @@ const Box = styled.div`
 const CardBox = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 10px;
+ justify-content: space-between;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 70vw;
+  
+
+  @media (max-width:850px) {
+    justify-content: center;
+    width: 90vw;
+    gap: 15px;
+  }
   
 `;
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: 365px;
+  width: 355px;
   height: 330px;
+  margin-bottom: 40px;
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 10px;
   border: 2px solid #DBDBDB;
   transition: 300ms;
 

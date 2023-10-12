@@ -58,15 +58,22 @@ const Container = styled.div`
 
 const Box = styled.div`
 display: flex;
+
 flex-direction: column;
 padding-bottom: 100px;
 
-width: 85vw;
+width: 70vw;
+@media (max-width: 850px){
+width: 90vw;
+
+}
+
 .intro{
     font-size: 14px;
     font-weight: 800;
     color: #0c60f2;
     margin-bottom: 10px;
+    width: 100%;
   }
   h2 {
     font-weight: 600;
@@ -77,7 +84,7 @@ width: 85vw;
     }
   }
   p{
-    max-width: 650px;
+    
     
     margin-bottom: 40px;
   }
@@ -85,6 +92,8 @@ width: 85vw;
 
 const TeamCard = styled.div`
 margin: 10px;
+
+
 `
 
 const CardBox = styled.div`
@@ -92,13 +101,18 @@ const CardBox = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width:850px){
+    justify-content: space-around;
+    width: 90vw;
+  }
   
   img {
     width: 270px;
     height: 290px;
     background-color: white;
-    
     border-top-left-radius: 50px;
+    
   }
   span{
     color: #0C60F2;

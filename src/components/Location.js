@@ -64,6 +64,7 @@ const Top = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  width: 85vw;
  
 
   & :nth-child(3) {

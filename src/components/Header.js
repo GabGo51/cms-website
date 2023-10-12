@@ -45,6 +45,9 @@ const Container = styled.header`
   width:100%;
   padding: 10px 0px;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const NavWrapper = styled.div`
@@ -55,6 +58,11 @@ const NavWrapper = styled.div`
   background-color: white;
   color: black;
   position: relative;
+  width: 75vw;
+  @media (max-width: 800px) {
+      width: 90vw;
+  }
+
 
   li {
     color: #002b54;
@@ -64,13 +72,16 @@ const NavWrapper = styled.div`
     cursor: pointer;
     border-bottom: 1px solid transparent;
     margin-right: 4vw;
+    
     @media (min-width: 900px) {
+      
       &:hover {
         border-bottom: 1px solid #0C60F2;
         transform: translateY(-5%);
       }
     }
     @media (max-width: 900px) {
+      
       &:hover {
         background-color: #dcdcdc;
       }
@@ -82,7 +93,7 @@ const Logo = styled.div`
   img {
     width: 100px;
     height: auto;
-    margin-left: 3vw;
+    
     @media (max-width: 500px) {
       width: 20vw;
     }
