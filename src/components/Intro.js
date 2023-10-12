@@ -5,13 +5,11 @@ import { styled } from "styled-components";
 
 const Intro = () => {
   return (
-    <Container >
-      <Hero/>
+    <Container>
+      <Hero />
       <Text id="intro">
-        <Clinique/>
-        
+        <Clinique />
       </Text>
-      
     </Container>
   );
 };
@@ -21,11 +19,6 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-
-  
-  
-
-  
 `;
 
 const Text = styled.div`
@@ -45,7 +38,5 @@ const Text = styled.div`
     }
   }
 `;
-
-
 
 export default Intro;

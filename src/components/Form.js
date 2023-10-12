@@ -14,14 +14,13 @@ const Form = () => {
   const toggleNew = () => {
     setNeww(!neww);
     setOld(false);
-    setSent(false)
+    setSent(false);
   };
 
   const toggleOld = () => {
     setOld(!old);
     setNeww(false);
-    setSent(false)
-    
+    setSent(false);
   };
 
   const handleSubmit = (e) => {
@@ -44,7 +43,7 @@ const Form = () => {
             console.log("SUCCESS!", response.status, response.text);
             console.log("new");
             Cmsform.current.reset();
-            scrollToRef("booking")
+            scrollToRef("booking");
             setSent(true);
           },
           function (error) {
@@ -67,7 +66,7 @@ const Form = () => {
             console.log("SUCCESS!", response.status, response.text);
             console.log("old");
             Cmsform.current.reset();
-            scrollToRef("booking")
+            scrollToRef("booking");
             setSent(true);
           },
           function (error) {
@@ -81,8 +80,7 @@ const Form = () => {
     const element = document.getElementById(id);
     console.log(element);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block:"start" });
-      
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -94,7 +92,7 @@ const Form = () => {
         <p>
           Notre équipe est là pour vous aider, quels que soient vos besoins.
         </p>
-        
+
         <ButtonContainer>
           <button onClick={toggleNew}>Nouveau client</button>
           <button onClick={toggleOld}>Reprise de rendez-vous</button>
@@ -107,8 +105,8 @@ const Form = () => {
         {sent && (
           <SentMessage>
             <p>
-              Votre requête est<span> envoyée </span>! Nous allons vous contacter
-              dans les plus bref délai.
+              Votre requête est<span> envoyée </span>! Nous allons vous
+              contacter dans les plus bref délai.
             </p>
           </SentMessage>
         )}
@@ -135,7 +133,7 @@ const Form = () => {
                 </select>
               </div>
               <div>
-                <label>Date de naissance  </label>
+                <label>Date de naissance </label>
                 <input required type="date" name="user_date" />
               </div>
               <div>
@@ -146,12 +144,11 @@ const Form = () => {
                 <label>Numéro de téléphone</label>
                 <input required type="phone" name="user_phone" />
               </div>
-              
+
               <div>
                 <label># Assurance maladie</label>
                 <input required type="text" name="user_am" />
               </div>
-              
 
               <div className="select-box">
                 <label> Avez-vous une demande d'infiltration ? </label>
@@ -160,7 +157,6 @@ const Form = () => {
                   <option value="Cortisone">Cortisone</option>
                   <option value="Viscosupléant">Viscosuppléant</option>
                   <option value="PRP">PRP (Plasma riche en plaquette)</option>
-                  
                 </select>
               </div>
               <div className="select-box">
@@ -182,7 +178,7 @@ const Form = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label>Blessure lors d'une activité sportive ?</label>
                 <div className="radio">
@@ -202,7 +198,6 @@ const Form = () => {
                   />
                 </div>
               </div>
-              
             </InputBox>
             <div>
               <label for="message">
@@ -253,7 +248,6 @@ const Form = () => {
                   <option value="Marc Gosselin">Marc Gosselin MD</option>
                   <option value="Eric Higgins">Eric Higgins MD</option>
                   <option value="Marieve Lefebvre">Marieve Lefebvre MD</option>
-                  
                 </select>
               </div>
             </InputBox>
@@ -291,7 +285,7 @@ const Container = styled.div`
 const Box = styled.div`
   width: 70vw;
   border-radius: 30px;
-  background-color: #CBDEFF;
+  background-color: #cbdeff;
   color: #252b42;
   display: flex;
   flex-direction: column;
@@ -302,7 +296,7 @@ const Box = styled.div`
   @media (max-width: 850px) {
     width: 100vw;
   }
-  .intro{
+  .intro {
     color: #0c60f2;
     font-size: 14px;
     font-weight: 800;
@@ -339,7 +333,7 @@ const Box = styled.div`
     justify-content: center;
     align-items: center;
     width: 170px;
-    
+
     background-color: #0c60f2;
     color: white;
     padding: 5px 30px;
@@ -373,7 +367,7 @@ const Box = styled.div`
     width: 60vw;
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 
-    @media (max-width: 850px){
+    @media (max-width: 850px) {
       width: 90vw;
     }
 
@@ -419,8 +413,8 @@ const Box = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  
-  button{
+
+  button {
     margin: 1vw 4.7vw;
   }
 `;
@@ -435,7 +429,7 @@ const SentMessage = styled.div`
   align-items: center;
   justify-content: center;
 
-  p{
+  p {
     margin-top: 20px;
   }
 
@@ -448,7 +442,7 @@ const SentMessage = styled.div`
 const InputBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  
+
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -464,7 +458,7 @@ const InputBox = styled.div`
     display: flex;
     align-items: center;
     width: 100px;
-    input{
+    input {
       margin-right: 10px;
     }
   }
@@ -472,7 +466,6 @@ const InputBox = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    
   }
   .select {
     height: 35px;
@@ -480,7 +473,7 @@ const InputBox = styled.div`
     padding: 5px 20px;
     border-radius: 5px;
     background-color: white;
-    
+
     &:focus {
       outline: 2px solid rgba(12, 96, 242, 0.2);
     }

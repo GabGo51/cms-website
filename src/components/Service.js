@@ -95,8 +95,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  .intro{
-    color:#0c60f2 ;
+  .intro {
+    color: #0c60f2;
     font-weight: 800;
     font-size: 14px;
   }
@@ -108,7 +108,7 @@ const Box = styled.div`
   flex-direction: column;
   margin-bottom: 100px;
   @media (max-width: 850px) {
-      width: 90vw;
+    width: 90vw;
   }
 
   h2 {
@@ -118,7 +118,6 @@ const Box = styled.div`
 
     @media (max-width: 850px) {
       font-size: 2em;
-
     }
   }
 `;
@@ -126,17 +125,15 @@ const Box = styled.div`
 const CardBox = styled.div`
   display: flex;
   align-items: center;
- justify-content: space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 70vw;
-  
 
-  @media (max-width:850px) {
+  @media (max-width: 850px) {
     justify-content: center;
     width: 90vw;
     gap: 15px;
   }
-  
 `;
 
 const Card = styled.div`
@@ -147,7 +144,7 @@ const Card = styled.div`
   margin-bottom: 40px;
   background-color: white;
   border-radius: 10px;
-  border: 2px solid #DBDBDB;
+  border: 2px solid #dbdbdb;
   transition: 300ms;
 
   &:hover {

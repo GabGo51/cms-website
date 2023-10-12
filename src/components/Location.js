@@ -44,12 +44,11 @@ const Container = styled.section`
     font-weight: 600;
     font-size: 3em;
     margin-bottom: 20px;
-  
+
     @media (max-width: 500px) {
       font-size: 2em;
     }
   }
- 
 
   iframe {
     width: 100vw;
@@ -65,7 +64,6 @@ const Top = styled.div`
   align-items: center;
   margin-bottom: 25px;
   width: 85vw;
- 
 
   & :nth-child(3) {
     margin-bottom: 2vw;
@@ -78,7 +76,7 @@ const Top = styled.div`
     margin-bottom: 10px;
   }
   .adresse {
-    margin-bottom:40px ;
+    margin-bottom: 40px;
   }
 `;
 
@@ -97,13 +95,13 @@ const IconBox = styled.div`
     transform: translateX(5%);
   }
 
-  .icon{
+  .icon {
     font-size: 1.2em;
     font-weight: 900;
     margin-right: 35px;
   }
 
-  i{
+  i {
     margin-right: 30px;
   }
 `;

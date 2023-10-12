@@ -2,14 +2,13 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Footer = () => {
-
   const scrollToRef = (id) => {
     const element = document.getElementById(id);
     console.log(element);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       console.log("hello");
-    }else{
+    } else {
       console.log("u dumb");
     }
   };
@@ -28,9 +27,15 @@ const Footer = () => {
         <h4>Centre de médecine sportive des Laurentides</h4>
         <p>305, rue du Docteur Charles Léonard, Suite 200</p>
         <p>St-Jérôme, Qc, J7Y 0M9</p>
-        <p>Téléphone :<a href="tel:450-438-0911"> 450 438-0911</a></p>
-        <p>FAX : <span>450 436-2719 </span> </p>
-        <p>Email: <span>123emailahah@gmail.com</span></p>
+        <p>
+          Téléphone :<a href="tel:450-438-0911"> 450 438-0911</a>
+        </p>
+        <p>
+          FAX : <span>450 436-2719 </span>{" "}
+        </p>
+        <p>
+          Email: <span>123emailahah@gmail.com</span>
+        </p>
       </Content>
       <Schedule>
         <h4>HORAIRE</h4>
@@ -53,16 +58,14 @@ const Container = styled.div`
 
   h4 {
     font-weight: 600;
-    
   }
 
   p {
-    color: #7C7C7C ;
+    color: #7c7c7c;
     font-size: 0.9em;
-    
   }
 
-  @media (max-width:500px){
+  @media (max-width: 500px) {
     padding: 10px 20px;
   }
 `;
@@ -73,7 +76,7 @@ const Nav = styled.nav`
     transition: 300ms;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       color: #0c60f2;
     }
   }
@@ -89,10 +92,10 @@ const Content = styled.div`
   & :nth-child(3) {
     margin-bottom: 2vw;
   }
-  span{
+  span {
     color: #0c60f2;
   }
-  a{
+  a {
     text-decoration: none;
   }
 `;

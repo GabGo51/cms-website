@@ -54,11 +54,11 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0vw 2vw;
+  
   background-color: white;
   color: black;
   position: relative;
-  width: 75vw;
+  width: 70vw;
   @media (max-width: 800px) {
       width: 90vw;
   }
@@ -101,6 +101,7 @@ const Logo = styled.div`
 `;
 
 const Services = styled.nav`
+  z-index: 400;
   i {
     display: none;
     transform: translateX(-100%);
@@ -119,6 +120,7 @@ const Services = styled.nav`
 
     li:last-child {
       background-color: #0C60F2;
+      margin-right: 0;
       color: white;
       font-weight: 600;
       padding: 10px 20px;
@@ -167,6 +169,8 @@ const Services = styled.nav`
         border-radius: 0px;
         border: none;
         padding: 10px;
+        background-color: white;
+        color: #0C60F2;
       }
     }
   }
