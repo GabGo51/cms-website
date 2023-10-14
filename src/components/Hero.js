@@ -40,6 +40,7 @@ const Hero = () => {
 
 export default Hero;
 
+
 const Container = styled.div`
   background-color: #0c60f2;
   color: white;
@@ -52,6 +53,7 @@ const Container = styled.div`
   h1 {
     color: white;
     margin-bottom: 40px;
+    max-width: 500px;
     font-family: Poppins;
     font-size: 2.5em;
     @media (max-width: 850px) {
@@ -68,6 +70,7 @@ const Container = styled.div`
     border: 2px solid white;
     transition: 200ms;
     font-size: 16px;
+    cursor: pointer;
     &:hover {
       background-color: #0c60f2;
       color: white;
@@ -98,7 +101,7 @@ const Box = styled.div`
 `;
 
 const TextBox = styled.div`
-  max-width: 500px;
+  max-width: 700px;
   min-width: 300px;
   margin-top: 70px;
   margin-right: 40px;
@@ -116,6 +119,9 @@ const ImageBox = styled.div`
     width: 340px;
     position: relative;
     z-index: 200;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+    animation-delay: 1s;
     @media (max-width: 850px) {
       width: 250px;
     }
@@ -131,10 +137,13 @@ const ImageBox = styled.div`
   .green {
     width: 275px;
     height: 100px;
+    opacity: 0;
     background-color: #c7d324;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     margin-bottom: 15px;
+    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+    animation-delay: 600ms;
     @media (max-width: 850px) {
       width: 200px;
       height: 75px;
@@ -144,12 +153,24 @@ const ImageBox = styled.div`
   .white {
     width: 365px;
     height: 375px;
+    opacity: 0;
     background-color: white;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 30%;
+    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
+    animation-delay: 800ms;
     @media (max-width: 850px) {
       width: 280px;
       height: 290px;
     }
   }
+
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 `;

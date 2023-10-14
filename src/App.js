@@ -6,12 +6,13 @@ import Location from "./components/Location";
 import Service from "./components/Service";
 import Form from "./components/Form";
 import Team from "./components/Team";
+import Clinique from "./components/Clinique";
 
 function App() {
   return (
     <Container>
       <Header />
-      <Intro id="intro" />
+      <Intro  />
       <Service id="service" />
       <Team id="team" />
       <Form id="booking" />

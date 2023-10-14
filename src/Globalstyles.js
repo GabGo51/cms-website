@@ -25,15 +25,21 @@ export default createGlobalStyle`
   
   html, body, div,
   input, button, select, option,
-  h1, h2, h3, h4, h5, h6, p,
+  h1, h2, h3, h4, h5, h6, 
   text, textarea {
     font-family: Poppins;
   }
 
   html, body {
     width: 100vw;
+    overflow-x: hidden;
     
   }
+
+  p{
+    font-family: Montserrat;
+  }
+
   
 
   html, body, div, span, applet, object, iframe,

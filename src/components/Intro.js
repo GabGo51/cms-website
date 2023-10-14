@@ -3,13 +3,12 @@ import Hero from "./Hero";
 import Clinique from "./Clinique";
 import { styled } from "styled-components";
 
+
 const Intro = () => {
   return (
-    <Container>
+    <Container >
       <Hero />
-      <Text id="intro">
-        <Clinique />
-      </Text>
+      <Clinique id="intro"/>
     </Container>
   );
 };
