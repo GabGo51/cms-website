@@ -61,8 +61,8 @@ const NavWrapper = styled.div`
   background-color: white;
   color: black;
   position: relative;
-  max-width: 1225px;
-  @media (max-width: 850px) {
+  max-width: 1125px;
+  @media (max-width: 1100px) {
       width: 90vw;
   }
 
@@ -76,14 +76,14 @@ const NavWrapper = styled.div`
     border-bottom: 1px solid transparent;
     margin-right: 4vw;
     
-    @media (min-width: 850px) {
+    @media (min-width: 1100px) {
       
       &:hover {
         border-bottom: 1px solid #0C60F2;
         transform: translateY(-5%);
       }
     }
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
       
       &:hover {
         background-color: #dcdcdc;
@@ -96,9 +96,9 @@ const Logo = styled.div`
   img {
     width: 100px;
     height: auto;
-    margin-right: 250px;
+    margin-right: 200px;
     
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
       width: 20vw;
     }
   }
@@ -139,7 +139,7 @@ const Services = styled.nav`
   }
 
   /* Media query for responsive design */
-  @media (max-width: 850px) {
+  @media (max-width: 1100px) {
     i {
       display: block;
     }
@@ -149,9 +149,9 @@ const Services = styled.nav`
       flex-direction: column;
       position: absolute;
       top: 100%;
-      left: 10%;
+      left: -5.7%;
       background-color: white;
-      width: 80vw;
+      width: 100vw;
     }
 
     li {

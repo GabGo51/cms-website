@@ -142,6 +142,7 @@ const ImageBox = styled.div`
     position: absolute;
     top: 20px;
     left: -10px;
+    
     @media (max-width: 850px) {
       top: -5px;
     }
