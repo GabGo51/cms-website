@@ -67,7 +67,7 @@ const Box = styled.div`
   flex-direction: column;
   padding-bottom: 100px;
 
-  width: 70vw;
+  max-width: 1125px;
   @media (max-width: 850px) {
     width: 90vw;
   }
@@ -108,8 +108,8 @@ const CardBox = styled.div`
   }
 
   img {
-    width: 270px;
-    height: 290px;
+    width: 250px;
+    height: 270px;
     background-color: white;
     border-top-left-radius: 50px;
   }
@@ -133,7 +133,7 @@ const TextBox = styled.div`
   background-color: rgba(12, 96, 242, 0.1);
   padding-bottom: 20px;
   border-bottom-right-radius: 50px;
-  width: 270px;
+  width: 250px;
   margin-top: -7px;
   padding-top: 10px;
 `;

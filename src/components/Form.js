@@ -283,7 +283,7 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  width: 70vw;
+  width: 65vw;
   border-radius: 30px;
   background-color: #cbdeff;
   color: #252b42;
@@ -368,7 +368,7 @@ const Box = styled.div`
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 
     @media (max-width: 850px) {
-      width: 90vw;
+      width: 85vw;
     }
 
     label {

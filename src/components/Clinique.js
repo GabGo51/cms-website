@@ -16,7 +16,7 @@ const Clinique = () => {
         <TextBox>
           <p className="intro">Bienvenue à</p>
           <h2>Notre Clinique</h2>
-          <p>
+          <p className="subtitle">
             L'endroit où la passion du sport rencontre l'expertise médicale.
           </p>
 
@@ -77,19 +77,38 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 70vw;
+  max-width: 1225px;
   @media (max-width: 850px) {
-      width: 90vw;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      
     }
 `;
 const ImageBox = styled.div`
+margin-bottom: 40px;
+margin-right: 110px;
+@media (max-width: 850px){
+  margin-right: 0;
+}
   .building {
     width: 460px;
     height: 322px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
     margin-bottom: 10px;
+
+    @media (max-width:850px){
+      height: 200px;
+      object-fit: cover;
+      object-position: 40%;
+    }
+    
+    @media (max-width: 550px) {
+      width: 355px;
+      height: 170px;
+      margin-right: 0px;
+    }
   }
 
   .green {
@@ -99,6 +118,10 @@ const ImageBox = styled.div`
     border-top-left-radius: 70px;
     border-bottom-right-radius: 70px;
     margin-right: 15px;
+    @media (max-width: 550px) {
+      width: 150px;
+      height: 120px;
+    }
   }
 
   .office {
@@ -106,21 +129,40 @@ const ImageBox = styled.div`
     height: 180px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 70px;
+    @media (max-width: 550px) {
+      width: 190px;
+      height: 120px;
+    }
   }
 `;
 const Bottom = styled.div`
   display: flex;
 `;
 const TextBox = styled.div`
-  .text {
+  max-width: 550px;
+  
+  @media (max-width: 850px) {
+      max-width: 90vw;
+    }
+
+  .subtitle{
+    color: #737373;
+    margin-bottom: 40px;
+    font-size: 14px;
     max-width: 500px;
+   
+    
+  }
+  .text {
+    max-width: 600px;
+    font-size: 0.8em;
     text-align: justify;
     line-height: 22px;
     margin: 20px 0px;
     @media (max-width: 850px) {
       max-width: 90vw;
-      
     }
+    
   }
 `;
 export default Clinique;

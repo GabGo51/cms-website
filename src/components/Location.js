@@ -77,6 +77,7 @@ const Top = styled.div`
   }
   .adresse {
     margin-bottom: 40px;
+    text-align: center;
   }
 `;
 

@@ -103,7 +103,7 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  width: 70vw;
+  width: 1125px;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
@@ -127,7 +127,7 @@ const CardBox = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 70vw;
+  width: 1125px;
 
   @media (max-width: 850px) {
     justify-content: center;

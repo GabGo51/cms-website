@@ -13,11 +13,14 @@ const Header = () => {
     const element = document.getElementById(id);
     console.log(element);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      
-    }else{
-      
-    }
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const targetScrollPosition = elementPosition - 50;
+
+      window.scrollTo({
+          top: targetScrollPosition,
+          behavior: "smooth"
+      });
+  }
   };
 
   return (
@@ -58,8 +61,8 @@ const NavWrapper = styled.div`
   background-color: white;
   color: black;
   position: relative;
-  width: 70vw;
-  @media (max-width: 800px) {
+  max-width: 1225px;
+  @media (max-width: 850px) {
       width: 90vw;
   }
 
@@ -73,7 +76,7 @@ const NavWrapper = styled.div`
     border-bottom: 1px solid transparent;
     margin-right: 4vw;
     
-    @media (min-width: 900px) {
+    @media (min-width: 850px) {
       
       &:hover {
         border-bottom: 1px solid #0C60F2;
@@ -93,6 +96,7 @@ const Logo = styled.div`
   img {
     width: 100px;
     height: auto;
+    margin-right: 250px;
     
     @media (max-width: 500px) {
       width: 20vw;
@@ -135,7 +139,7 @@ const Services = styled.nav`
   }
 
   /* Media query for responsive design */
-  @media (max-width: 900px) {
+  @media (max-width: 850px) {
     i {
       display: block;
     }

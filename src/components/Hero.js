@@ -49,15 +49,17 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 50px 0px;
+ 
 
   h1 {
     color: white;
     margin-bottom: 40px;
-    max-width: 500px;
+    max-width: 700px;
+    font-weight: 600;
     font-family: Poppins;
-    font-size: 2.5em;
+    font-size: 60px;
     @media (max-width: 850px) {
-      font-size: 1.5em;
+      font-size: 32px;
     }
   }
   button {
@@ -79,6 +81,10 @@ const Container = styled.div`
 
   p {
     margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 650px;
+    line-height: 30px;
   }
 `;
 
@@ -86,7 +92,7 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   
-  width: 70vw;
+  max-width: 1225px;
 
   @media (max-width: 850px) {
     width: 90vw;
@@ -97,17 +103,23 @@ const Box = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    
   }
 `;
 
 const TextBox = styled.div`
   max-width: 700px;
-  min-width: 300px;
+  min-width: 350px;
   margin-top: 70px;
-  margin-right: 40px;
+  margin-right: 80px;
 
   @media (max-width: 850px) {
     margin-bottom: 50px;
+    margin-right: 0px;
+
+    p{
+      font-size: 14px;
+    }
   }
 `;
 
