@@ -68,7 +68,7 @@ const Box = styled.div`
   padding-bottom: 100px;
 
   max-width: 1125px;
-  @media (max-width: 850px) {
+  @media (max-width: 1120px) {
     width: 90vw;
   }
 
@@ -102,7 +102,7 @@ const CardBox = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media (max-width: 850px) {
+  @media (max-width: 1120px) {
     justify-content: space-around;
     width: 90vw;
   }

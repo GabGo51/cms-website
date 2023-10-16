@@ -78,7 +78,7 @@ const Box = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1225px;
-  @media (max-width: 850px) {
+  @media (max-width: 1120px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -141,7 +141,7 @@ const Bottom = styled.div`
 const TextBox = styled.div`
   max-width: 550px;
   
-  @media (max-width: 850px) {
+  @media (max-width: 1120px) {
       max-width: 90vw;
     }
 
@@ -159,7 +159,7 @@ const TextBox = styled.div`
     text-align: justify;
     line-height: 22px;
     margin: 20px 0px;
-    @media (max-width: 850px) {
+    @media (max-width: 1120px) {
       max-width: 90vw;
     }
     
