@@ -106,7 +106,7 @@ const Form = () => {
           <SentMessage>
             <p>
               Votre requête est<span> envoyée </span>! Nous allons vous
-              contacter dans les plus bref délai.
+              contacter dans les plus brefs délais.
             </p>
           </SentMessage>
         )}
@@ -333,7 +333,7 @@ const Box = styled.div`
     justify-content: center;
     align-items: center;
     width: 170px;
-
+    height: 60px;
     background-color: #0c60f2;
     color: white;
     padding: 5px 30px;
@@ -416,6 +416,7 @@ const ButtonContainer = styled.div`
 
   button {
     margin: 1vw 4.7vw;
+    
   }
 `;
 
@@ -481,7 +482,8 @@ const InputBox = styled.div`
 `;
 
 const Loading = styled.img`
-  scale: 0.25;
+  
+  height: 50px;
 `;
 
 export default Form;

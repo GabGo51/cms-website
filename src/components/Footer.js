@@ -39,7 +39,7 @@ const Footer = () => {
       </Content>
       <Schedule>
       <h4>HORAIRE</h4>
-      <p>Notre horaire varie, clicker <a target="#" href="https://www.google.com/maps/place/Centre+de+M%C3%A9decine+sportive+des+Laurentides/@45.7626211,-74.0030427,17z/data=!3m2!4b1!5s0x4ccf2b505d5850b1:0xaa95fe6431c3e58d!4m6!3m5!1s0x4ccf2b950f2292f7:0xa1b2f2fc9657e2df!8m2!3d45.7626174!4d-74.0004678!16s%2Fg%2F11h3btrsc2?entry=ttu">
+      <p>Nos horaires varient, clicker <a target="#" href="https://www.google.com/maps/place/Centre+de+M%C3%A9decine+sportive+des+Laurentides/@45.7626211,-74.0030427,17z/data=!3m2!4b1!5s0x4ccf2b505d5850b1:0xaa95fe6431c3e58d!4m6!3m5!1s0x4ccf2b950f2292f7:0xa1b2f2fc9657e2df!8m2!3d45.7626174!4d-74.0004678!16s%2Fg%2F11h3btrsc2?entry=ttu">
           ICI
         </a> pour accéder à l'horaire de cette semaine</p>
         
