@@ -8,7 +8,7 @@ const Team = () => {
       <Box>
         <p className="intro">Rencontrez</p>
         <h2>Notre Équipe</h2>
-        <p>
+        <p className="subtitle">
           Le Centre de medecine Sportive des Laurentides regroupe une équipe de
           4 medecins passionnés de médecine sportive.
         </p>
@@ -89,6 +89,13 @@ const Box = styled.div`
   }
   p {
     margin-bottom: 40px;
+  }
+  .subtitle{
+    color: #737373;
+    margin-bottom: 40px;
+    font-size: 16px;
+    max-width:90vw ;
+   
   }
 `;
 

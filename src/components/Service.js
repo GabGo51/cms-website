@@ -12,6 +12,7 @@ const Service = () => {
       <Box>
         <p className="intro">Découvrez</p>
         <h2>Nos Services</h2>
+        <p className="subtitle">Explorez notre gamme complète de services dédiés à l'amélioration de votre performance sportive et à la gestion de vos blessures.</p>
         <CardBox>
           <Card>
             <Content>
@@ -114,11 +115,18 @@ const Box = styled.div`
   h2 {
     font-weight: 600;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     @media (max-width: 850px) {
       font-size: 2em;
     }
+  }
+  .subtitle{
+    color: #737373;
+    margin-bottom: 40px;
+    font-size: 16px;
+    max-width:90vw ;
+   
   }
 `;
 

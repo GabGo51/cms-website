@@ -148,7 +148,7 @@ const TextBox = styled.div`
   .subtitle{
     color: #737373;
     margin-bottom: 40px;
-    font-size: 14px;
+    font-size: 16px;
     max-width: 500px;
    
     
