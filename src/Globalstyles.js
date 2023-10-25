@@ -38,17 +38,17 @@ export default createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, p, button {
-    animation: fadeIn 0.2s forwards; /* Apply the fade-in animation */
-    animation-delay: 700ms;
-    opacity: 0;
-    @keyframes fadeIn {
+    /* animation: fadeIn 0.2s forwards; Apply the fade-in animation */
+    /* animation-delay: 700ms;
+    opacity: 0; */
+    /* @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}
+} */
   }
 
   
