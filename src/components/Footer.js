@@ -15,6 +15,7 @@ const Footer = () => {
   return (
     <Container>
       <Nav>
+        <h4>Liens Rapides</h4>
         <ul>
           <li onClick={() => scrollToRef("intro")}>Clinique</li>
           <li onClick={() => scrollToRef("service")}>Services</li>
@@ -24,7 +25,7 @@ const Footer = () => {
         </ul>
       </Nav>
       <Content>
-        <h4>Centre de médecine sportive des Laurentides</h4>
+        <h4>Centre de Médecine Sportive des Laurentides</h4>
         <p>305, rue du Docteur Charles Léonard, Suite 200</p>
         <p>St-Jérôme, Qc, J7Y 0M9</p>
         <p>
@@ -33,15 +34,18 @@ const Footer = () => {
         <p>
           FAX : <span>450 436-2719 </span>{" "}
         </p>
-        <p>
-          Email: <span>123emailahah@gmail.com</span>
+        <p className="email">E-mail:
+          <a href="mailto:cmsl@equilibrum.ca">
+           cmsl@equilibrum.ca
+        </a>
         </p>
+        
       </Content>
       <Schedule>
-      <h4>HORAIRE</h4>
-      <p>Nos horaires varient, clicker <a target="#" href="https://www.google.com/maps/place/Centre+de+M%C3%A9decine+sportive+des+Laurentides/@45.7626211,-74.0030427,17z/data=!3m2!4b1!5s0x4ccf2b505d5850b1:0xaa95fe6431c3e58d!4m6!3m5!1s0x4ccf2b950f2292f7:0xa1b2f2fc9657e2df!8m2!3d45.7626174!4d-74.0004678!16s%2Fg%2F11h3btrsc2?entry=ttu">
+      <h4>Horaire</h4>
+      <p>Nos horaires peuvent varier, Accédez à l’horaire de cette semaine<a target="#" href="https://www.google.com/maps/place/Centre+de+M%C3%A9decine+sportive+des+Laurentides/@45.7626211,-74.0030427,17z/data=!3m2!4b1!5s0x4ccf2b505d5850b1:0xaa95fe6431c3e58d!4m6!3m5!1s0x4ccf2b950f2292f7:0xa1b2f2fc9657e2df!8m2!3d45.7626174!4d-74.0004678!16s%2Fg%2F11h3btrsc2?entry=ttu">
           ICI
-        </a> pour accéder à l'horaire de cette semaine</p>
+        </a></p>
         
       </Schedule>
     </Container>
@@ -55,6 +59,7 @@ const Container = styled.footer`
 
   h4 {
     font-weight: 600;
+    margin-bottom: 15px;
   }
 
   p {
@@ -86,6 +91,10 @@ const Content = styled.div`
   margin-bottom: 20px;
   line-height: 20px;
   
+  .email{
+    white-space: nowrap;
+  }
+  
   & :nth-child(3) {
     margin-bottom: 2vw;
   }
@@ -94,6 +103,7 @@ const Content = styled.div`
   }
   a {
     text-decoration: none;
+    margin-left: 5px;
   }
   @media (max-width: 850px) {
     margin-right: 20px;
@@ -103,6 +113,9 @@ const Content = styled.div`
 const Schedule = styled.div`
   line-height: 25px;
   max-width: 300px;
+  a{
+    margin-left: 10px;
+  }
 `;
 
 export default Footer;

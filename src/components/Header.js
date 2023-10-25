@@ -35,7 +35,7 @@ const Header = () => {
             <li onClick={() => scrollToRef("intro")}>CLINIQUE</li>
             <li onClick={() => scrollToRef("service")}>SERVICES</li>
             <li onClick={() => scrollToRef("team")}>ÉQUIPE</li>
-            <li onClick={() => scrollToRef("location")}>LOCALISATION</li>
+            <li onClick={() => scrollToRef("location")}>ADRESSE</li>
             <li onClick={() => scrollToRef("booking")}>PRENDRE RENDEZ-VOUS</li>
           </ul>
         </Services>

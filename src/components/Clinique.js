@@ -21,28 +21,28 @@ const Clinique = () => {
           </p>
 
           <p className="text">
-            Le CMS Laurentides a émergé de la passion commune des Dr Gosselin et
-            Higgins pour la médecine du sport et les pathologies
-            musculo-squelettiques. Grâce à leur expérience au sein du
-            département de chirurgie orthopédique du CSSS de St-Jérôme, ils ont
-            acquis une solide expertise.
+            Fondée il y a plus de 20 ans au cœur des Laurentides, notre clinique
+            émane de la passion d'une équipe médicale dévouée à la médecine
+            sportive et aux pathologies musculosquelettiques. Forts d'une
+            formation rigoureuse et d'une riche expérience, nous offrons une
+            prise en charge personnalisée, combinant expertise et bienveillance.
           </p>
           <p className="text">
-            L'opportunité s'est présentée avec l'arrivée du programme
-            sport-études de la polyvalente de St-Jérôme. Les médecins du CMS
-            Laurentides ont rapidement compris qu'une collaboration était
-            inévitable. Cela leur permettait de pratiquer une médecine
-            préventive et curative tout en aidant les jeunes sportifs. De plus,
-            la diversité des sports pratiqués offrait une occasion unique
-            d'acquérir une expertise spécifique à chaque discipline.
+            La clinique se caractérise par une gamme étendue de traitements et
+            services. Que ce soit pour la prévention auprès des athlètes
+            débutants ou confirmés, le traitement des lésions sportives ou la
+            prise en charge de pathologies musculo squelettiques telles que
+            l'arthrose et les tendinopathies, notre objectif est de permettre à
+            chacun de maintenir une vie active. Animés par l'innovation, nous
+            avons adopté les techniques médicales les plus récentes, incluant
+            les infiltrations échoguidées et des approches innovantes en
+            médecine régénérative.
           </p>
           <p className="text">
-            Depuis lors, le programme sport-études a connu une croissance
-            significative, tout comme le CMS Laurentides. Nos jeunes athlètes,
-            qu'ils évoluent au niveau collégial, universitaire ou au sein
-            d'équipes nationales, font notre fierté. Notre ambition pour
-            l'avenir est d'élargir notre offre de services aux équipes sportives
-            locales et aux athlètes de la région des Laurentides.
+            La mission de la Clinique de Médecine Sportive des Laurentides va
+            bien au-delà de la simple prise en charge des athlètes d'élite. Nous
+            aspirons à offrir à tous, quelle que soit leur activité ou leur âge,
+            la possibilité de mener une vie dynamique, épanouie et sans douleur.
           </p>
         </TextBox>
       </Box>
@@ -64,7 +64,6 @@ const Container = styled.div`
   h2 {
     font-weight: 600;
     font-size: 2.5em;
-    
 
     @media (max-width: 850px) {
       font-size: 2em;
@@ -72,25 +71,23 @@ const Container = styled.div`
   }
 `;
 
-
 const Box = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1225px;
   @media (max-width: 1120px) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const ImageBox = styled.div`
-margin-bottom: 40px;
-margin-right: 110px;
-@media (max-width: 850px){
-  margin-right: 0;
-}
+  margin-bottom: 40px;
+  margin-right: 110px;
+  @media (max-width: 850px) {
+    margin-right: 0;
+  }
   .building {
     width: 460px;
     height: 322px;
@@ -98,12 +95,12 @@ margin-right: 110px;
     border-bottom-left-radius: 70px;
     margin-bottom: 10px;
 
-    @media (max-width:850px){
+    @media (max-width: 850px) {
       height: 200px;
       object-fit: cover;
       object-position: 40%;
     }
-    
+
     @media (max-width: 550px) {
       width: 355px;
       height: 170px;
@@ -140,18 +137,16 @@ const Bottom = styled.div`
 `;
 const TextBox = styled.div`
   max-width: 550px;
-  
-  @media (max-width: 1120px) {
-      max-width: 90vw;
-    }
 
-  .subtitle{
+  @media (max-width: 1120px) {
+    max-width: 90vw;
+  }
+
+  .subtitle {
     color: #737373;
     margin-bottom: 40px;
     font-size: 16px;
     max-width: 500px;
-   
-    
   }
   .text {
     max-width: 600px;
@@ -162,7 +157,6 @@ const TextBox = styled.div`
     @media (max-width: 1120px) {
       max-width: 90vw;
     }
-    
   }
 `;
 export default Clinique;

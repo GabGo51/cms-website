@@ -90,12 +90,12 @@ const Form = () => {
         <p className="intro">Prise de Rendez-Vous</p>
         <h2>Contactez Nous</h2>
         <p>
-          Notre équipe est là pour vous aider, quels que soient vos besoins.
+        Notre équipe est à votre disposition pour tenter de répondre et trouver des solutions adaptées à vos besoins.
         </p>
 
         <ButtonContainer>
-          <button onClick={toggleNew}>Nouveau client</button>
-          <button onClick={toggleOld}>Reprise de rendez-vous</button>
+          <button onClick={toggleNew}>Première visite</button>
+          <button onClick={toggleOld}>RV de suivi - Patient connu</button>
         </ButtonContainer>
 
         <i
@@ -201,7 +201,7 @@ const Form = () => {
             </InputBox>
             <div>
               <label for="message">
-                Décrivez la raison de votre rendez-vous
+              Décrivez le motif de votre demande de Rendez-vous
               </label>
               <textarea required name="message" />
             </div>
@@ -252,7 +252,7 @@ const Form = () => {
               </div>
             </InputBox>
             <div>
-              <label>Décrivez la raison de votre rendez-vous</label>
+              <label>Décrivez le motif de votre demande de Rendez-vous</label>
               <textarea required name="message" />
             </div>
 
@@ -343,7 +343,7 @@ const Box = styled.div`
     cursor: pointer;
     margin-bottom: 10px;
     transition: 0.4s;
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px;
 
     &:hover {

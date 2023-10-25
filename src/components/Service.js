@@ -6,22 +6,26 @@ import injection from "../img/injection.jpg";
 import weights from "../img/weights.png";
 import run from "../img/run.jpg";
 import echo from "../img/echo.jpg";
+import plaquette from "../img/plaquette.PNG"
 const Service = () => {
   return (
     <Container id="service">
       <Box>
         <p className="intro">Découvrez</p>
         <h2>Nos Services</h2>
-        <p className="subtitle">Explorez notre gamme complète de services dédiés à l'amélioration de votre performance sportive et à la gestion de vos blessures.</p>
+        <p className="subtitle">
+          Découvrez l'ensemble de nos services consacrés à l'optimisation de vos
+          performances sportives et à la prise en charge de vos blessures.
+        </p>
         <CardBox>
           <Card>
             <Content>
-              <h3>Consultation musculo-squeletique</h3>
+              <h3>Consultations en médecine musculosquelettique</h3>
               <div className="greenDiv"></div>
               <p>
-                Sur référence de votre médecin.Évaluation et traitement de
-                blessures musculo-squelettiques, soit occasionées par l’activité
-                …
+                Sur recommandation de votre médecin, nous effectuons
+                l'évaluation et la prise en charge de diverses lésions
+                musculosquelettiques.
               </p>
               <img src={echo} alt="swimmming" />
             </Content>
@@ -31,20 +35,20 @@ const Service = () => {
               <h3>Suivi pour les athlètes de programmes d’équipes sportives</h3>
               <div className="greenDiv"></div>
               <p>
-                Correction de problèmes biomécaniques. Évaluation de la
-                condition par un physiothérapeute ou un kinésiologue.
+                Évaluation pré-saison, prise en charge multidisciplinaire,
+                prévention et intervention en cas de blessures.
               </p>
               <img src={swim} alt="swimmming" />
             </Content>
           </Card>
           <Card>
             <Content>
-              <h3>Injection de cortisone sous guidage échographique</h3>
+              <h3>Clinique d’infiltrations échoguidées</h3>
               <div className="greenDiv"></div>
               <p>
-                Sur référence de votre médecin.Évaluation et traitement de
-                blessures musculo-squelettiques, soit occasionées par l’activité
-                …
+                L'infiltration échoguidée est une technique médicale qui utilise
+                l'échographie pour guider avec précision l'injection de
+                médicaments dans une zone ciblée du corps.
               </p>
               <img src={injection} alt="swimmming" />
             </Content>
@@ -54,9 +58,9 @@ const Service = () => {
               <h3>Clinique d’arthrose</h3>
               <div className="greenDiv"></div>
               <p>
-                Sur référence de votre médecin.Évaluation et traitement de
-                blessures musculo-squelettiques, soit occasionées par l’activité
-                …
+                La clinique d'arthrose se spécialise dans la prise en charge non
+                chirurgicale et le suivi des affections articulaires
+                dégénératives.
               </p>
               <img src={gnou} alt="swimmming" />
             </Content>
@@ -66,23 +70,24 @@ const Service = () => {
               <h3>Évaluation de la condition physique chez le Sportif</h3>
               <div className="greenDiv"></div>
               <p>
-                Sur référence de votre médecin.Évaluation et traitement de
-                blessures musculo-squelettiques, soit occasionées par l’activité
-                …
+                Le service d'évaluation 
+                se concentre sur la détection des facteurs de risque et la mise
+                en place d'un plan adapté pour la préparation à un événement
+                sportif ou une remise en forme.
               </p>
               <img src={weights} alt="swimmming" />
             </Content>
           </Card>
           <Card>
             <Content>
-              <h3>Clinique d’évaluation du coureur</h3>
+              <h3>Médecine régénérative (Plasma riche en plaquettes) </h3>
               <div className="greenDiv"></div>
               <p>
-                Sur référence de votre médecin.Évaluation et traitement de
-                blessures musculo-squelettiques, soit occasionées par l’activité
-                …
+                Le service de médecine régénérative propose des injections de
+                plasma riche en plaquettes pour traiter diverses affections,
+                telles que les tendinopathies et les arthropathies.
               </p>
-              <img src={run} alt="swimmming" />
+              <img src={plaquette} alt="seringue" />
             </Content>
           </Card>
         </CardBox>
@@ -121,12 +126,11 @@ const Box = styled.div`
       font-size: 2em;
     }
   }
-  .subtitle{
+  .subtitle {
     color: #737373;
     margin-bottom: 40px;
     font-size: 16px;
-    max-width:90vw ;
-   
+    max-width: 90vw;
   }
 `;
 
@@ -148,7 +152,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   width: 345px;
-  height: 330px;
+  height: 340px;
   margin-bottom: 40px;
   background-color: white;
   border-radius: 10px;
@@ -161,7 +165,7 @@ const Card = styled.div`
 
   h3 {
     height: 51px;
-    width: 321px;
+    width: 310px;
     font-weight: 600;
     font-size: 1em;
   }
@@ -185,19 +189,20 @@ const Card = styled.div`
     margin-bottom: 15px;
     position: absolute;
     top: 100px;
-    width: 321px;
+    width: 300px;
     height: 102px;
+    
   }
 
   img {
-    width: 321px;
+    width: 310px;
     height: 137px;
     object-fit: cover;
 
     border-radius: 10px;
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 16.5px;
   }
 `;
 

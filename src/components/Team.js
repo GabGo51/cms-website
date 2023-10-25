@@ -1,56 +1,72 @@
 import React from "react";
 import marc from "../img/Marc.png";
 import { styled } from "styled-components";
+import { useState } from "react";
 
 const Team = () => {
+  const [selectedPerson, setSelectedPerson] = useState(null);
+
+  const togglePerson = (personName) => {
+    setSelectedPerson(personName === selectedPerson ? null : personName);
+  };
+
+  console.log(selectedPerson);
+
   return (
     <Container id="team">
       <Box>
         <p className="intro">Rencontrez</p>
         <h2>Notre Équipe</h2>
         <p className="subtitle">
-          Le Centre de medecine Sportive des Laurentides regroupe une équipe de
-          4 medecins passionnés de médecine sportive.
+          Le Centre de Médecine Sportive des Laurentides regroupe une équipe de
+          médecins spécialisés en médecine du sport et de l’exercice.
         </p>
         <CardBox>
           <TeamCard>
             <img src={marc} alt="profileigm" />
             <TextBox>
               <p>
-                <span>Marc Gosselin MD</span>
+                <span>Dr Marc Gosselin </span>
               </p>
-              <p>small description of ppl</p>
+              <button onClick={() => togglePerson('marc')}>Info <div>+</div></button>
             </TextBox>
           </TeamCard>
           <TeamCard>
             <img src={marc} alt="profileigm" />
             <TextBox>
               <p>
-                <span>Marc Gosselin MD</span>
+                <span>Dr Mariève Lefebvre </span>
               </p>
-              <p>small description of ppl</p>
+              <button onClick={() => togglePerson('marie')}>Info <div>+</div></button>
             </TextBox>
           </TeamCard>
           <TeamCard>
             <img src={marc} alt="profileigm" />
             <TextBox>
               <p>
-                <span>Marc Gosselin MD</span>
+                <span>Dr Eric Higgins  </span>
               </p>
-              <p>small description of ppl</p>
+              <button onClick={() => togglePerson('eric')}>Info <div>+</div></button>
             </TextBox>
           </TeamCard>
           <TeamCard>
             <img src={marc} alt="profileigm" />
             <TextBox>
               <p>
-                <span>Marc Gosselin MD</span>
+                <span>Carolle Lauzon</span>
               </p>
-              <p>small description of ppl</p>
+              <button onClick={() => togglePerson('caro')}>Info <div>+</div></button>
             </TextBox>
           </TeamCard>
         </CardBox>
+        <InfoBox>
+          {selectedPerson === null && <p>yo</p>}
+
+
+        </InfoBox>
       </Box>
+
+      
     </Container>
   );
 };
@@ -90,12 +106,11 @@ const Box = styled.div`
   p {
     margin-bottom: 40px;
   }
-  .subtitle{
+  .subtitle {
     color: #737373;
     margin-bottom: 40px;
     font-size: 16px;
-    max-width:90vw ;
-   
+    max-width: 90vw;
   }
 `;
 
@@ -143,6 +158,17 @@ const TextBox = styled.div`
   width: 250px;
   margin-top: -7px;
   padding-top: 10px;
+  margin-bottom: 30px;
 `;
+
+const InfoBox = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid grey;
+border-radius: 30px;
+height: 50px;
+width: 100%;
+`
 
 export default Team;

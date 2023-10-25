@@ -4,11 +4,11 @@ const Location = () => {
   return (
     <Container id="location">
       <Top>
-        <p className="intro">Venez nous Voir</p>
-        <h2>Localisation</h2>
+        <p className="intro">Où nous trouver ?</p>
+        <h2>Adresse</h2>
 
         <p className="adresse">
-          305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9
+        305, rue du Docteur Charles Léonard, Suite 200, ST-JERÔME, QC, J7Y 0M9
         </p>
         <IconBox>
           <div>
@@ -16,7 +16,7 @@ const Location = () => {
             <p>Parking disponible</p>
           </div>
           <div>
-            <i class="fa-solid fa-wheelchair"></i>
+            <i className="fa-solid fa-wheelchair"></i>
             <p>Accessible</p>
           </div>
         </IconBox>
@@ -42,7 +42,7 @@ const Container = styled.section`
   padding-top: 100px;
   h2 {
     font-weight: 600;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 
     @media (max-width: 500px) {
