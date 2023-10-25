@@ -16,14 +16,15 @@ const Team = () => {
     const element = document.getElementById(id);
     console.log(element);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
       const targetScrollPosition = elementPosition - 50;
 
       window.scrollTo({
-          top: targetScrollPosition,
-          behavior: "smooth"
+        top: targetScrollPosition,
+        behavior: "smooth",
       });
-  }
+    }
   };
 
   return (
@@ -37,92 +38,105 @@ const Team = () => {
         </p>
         <CardBox>
           <TeamCard>
-            <img src={marc} alt="profileigm" />
-            <TextBox>
+            <ImgBox>
+              <img src={marc} alt="profileigm" />
+              <div className="over"></div>
               <p>
                 <span>Dr Marc Gosselin </span>
               </p>
-              <button onClick={() => [togglePerson("marc"),scrollToRef("info")]}
-              >
-                Info <div>+</div>
+            </ImgBox>
+            <Info>
+              <button onClick={() => togglePerson("marc")}>
+                <p>Voir la Bibliographie</p>{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </button>
-            </TextBox>
+              {selectedPerson === "marc" && (
+                <div>
+                  Le Dr Marc Gosselin est un médecin spécialisé en médecine
+                  sportive. Au-delà de sa passion pour la santé et le bien-être,
+                  il est aussi un aventurier dans l'âme, toujours en quête de
+                  nouvelles expériences. Communicateur hors pair, il adore
+                  partager ses connaissances et sa passion, tant à ses patients
+                  qu'à un public plus large.
+                </div>
+              )}
+            </Info>
           </TeamCard>
           <TeamCard>
-            <img src={marc} alt="profileigm" />
-            <TextBox>
+            <ImgBox>
+              <img src={marc} alt="profileigm" />
+              <div className="over"></div>
               <p>
                 <span>Dr Mariève Lefebvre </span>
               </p>
+            </ImgBox>
+            <Info>
               <button onClick={() => togglePerson("marie")}>
-                Info <div>+</div>
+                <p>Voir la Bibliographie</p>{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </button>
-            </TextBox>
+              {selectedPerson === "marie" && (
+                <div>
+                  Le Dr Mariève Lefebvre, spécialisée en médecine sportive et
+                  orthopédie de première ligne, est une véritable globetrotter.
+                  C'est sa passion pour le ski de compétition qui l'a
+                  naturellement orientée vers la médecine sportive, combinant
+                  ainsi son amour pour le sport et son dévouement professionnel.
+                </div>
+              )}
+            </Info>
           </TeamCard>
           <TeamCard>
-            <img src={marc} alt="profileigm" />
-            <TextBox>
+            <ImgBox>
+              <img src={marc} alt="profileigm" />
+              <div className="over"></div>
               <p>
                 <span>Dr Eric Higgins </span>
               </p>
+            </ImgBox>
+            <Info>
               <button onClick={() => togglePerson("eric")}>
-                Info <div>+</div>
+                <p>Voir la Bibliographie</p>{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </button>
-            </TextBox>
+              {selectedPerson === "eric" && (
+                <div>
+                  Le Dr Higgins se distingue par son expertise en médecine
+                  sportive et son rôle en orthopédie de première ligne. Il est
+                  également reconnu pour sa contribution en médecine du travail
+                  et dans le suivi des TCCL (commotions cérébrales). Passionné
+                  de triathlon et de vélo, il allie parfaitement sa profession à
+                  ses passions, offrant ainsi une approche unique et engagée à
+                  ses patients.
+                </div>
+              )}
+            </Info>
           </TeamCard>
           <TeamCard>
-            <img src={marc} alt="profileigm" />
-            <TextBox>
+            <ImgBox>
+              <img src={marc} alt="profileigm" />
+              <div className="over"></div>
               <p>
-                <span>Carolle Lauzon</span>
+                <span>Carolle Lauzon </span>
               </p>
+            </ImgBox>
+            <Info>
               <button onClick={() => togglePerson("caro")}>
-                Info <div>+</div>
+                <p>Voir la Bibliographie</p>{" "}
+                <i className="fa-solid fa-angle-down"></i>
               </button>
-            </TextBox>
+              {selectedPerson === "caro" && (
+                <div>
+                  Coordonnatrice de la clinique, se distingue par son efficacité
+                  redoutable et son attention constante envers les patients.
+                  Toujours de bonne humeur et en mouvement, son dévouement est
+                  inégalé. Passionnée par le sport, elle allie dynamisme
+                  professionnel et esprit sportif au quotidien.
+                </div>
+              )}
+            </Info>
           </TeamCard>
         </CardBox>
-        <InfoBox id="info">
-          {selectedPerson === null && <p>Utiliser le </p>}
-          {selectedPerson === "marc" && (
-            <p>
-              Le Dr Marc Gosselin est un médecin spécialisé en médecine
-              sportive. Au-delà de sa passion pour la santé et le bien-être, il
-              est aussi un aventurier dans l'âme, toujours en quête de nouvelles
-              expériences. Communicateur hors pair, il adore partager ses
-              connaissances et sa passion, tant à ses patients qu'à un public
-              plus large.
-            </p>
-          )}
-          {selectedPerson === "marie" && (
-            <p>
-              Le Dr Higgins se distingue par son expertise en médecine sportive
-              et son rôle en orthopédie de première ligne. Il est également
-              reconnu pour sa contribution en médecine du travail et dans le
-              suivi des TCCL (commotions cérébrales). Passionné de triathlon et
-              de vélo, il allie parfaitement sa profession à ses passions,
-              offrant ainsi une approche unique et engagée à ses patients.
-            </p>
-          )}
-          {selectedPerson === "eric" && (
-            <p>
-              Le Dr Mariève Lefebvre, spécialisée en médecine sportive et
-              orthopédie de première ligne, est une véritable globetrotter.
-              C'est sa passion pour le ski de compétition qui l'a naturellement
-              orientée vers la médecine sportive, combinant ainsi son amour pour
-              le sport et son dévouement professionnel.
-            </p>
-          )}
-          {selectedPerson === "caro" && (
-            <p>
-              Carolle Lauzon, coordonnatrice de la clinique, se distingue par son efficacité
-              redoutable et son attention constante envers les patients.
-              Toujours de bonne humeur et en mouvement, son dévouement est
-              inégalé. Passionnée par le sport, elle allie dynamisme
-              professionnel et esprit sportif au quotidien.
-            </p>
-          )}
-        </InfoBox>
       </Box>
     </Container>
   );
@@ -172,13 +186,8 @@ const Box = styled.div`
   }
 `;
 
-const TeamCard = styled.div`
-  margin: 10px;
-`;
-
 const CardBox = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -186,6 +195,17 @@ const CardBox = styled.div`
     justify-content: space-around;
     width: 90vw;
   }
+`;
+
+const TeamCard = styled.div`
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ImgBox = styled.div`
+  position: relative;
+  height: 270px;
 
   img {
     width: 250px;
@@ -193,71 +213,51 @@ const CardBox = styled.div`
     background-color: white;
     border-top-left-radius: 50px;
   }
+
+  .over {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
   span {
-    color: #0c60f2;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: white;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
   }
-
-  p {
-    margin-bottom: 20px;
-  }
 `;
 
-const TextBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(12, 96, 242, 0.1);
-  padding-bottom: 20px;
-  border-bottom-right-radius: 50px;
+const Info = styled.div`
   width: 250px;
-  margin-top: -7px;
-  padding-top: 10px;
-  margin-bottom: 30px;
+  font-size: 13px;
 
-  button{
+  button {
     cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(12, 96, 242, 0.1);
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-color:#0c60f2 ;
-    color: white;
-    font-weight: 600;
     border: none;
-    width: 80px;
-    height: 40px;
-    border-radius: 20px;
-    div{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 10px;
-      background-color: white;
-      color: #0c60f2;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
+    p {
+      margin: 0;
     }
-
   }
-`;
 
-const InfoBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #dbdbdb;
-  border-radius: 30px;
-  padding: 20px;
-  width: 95%;
-
-  p{
-    font-size: 14px;
-    max-height: 130px;
-    margin: 0;
+  div {
+    padding: 10px;
+    background-color: rgba(12, 96, 242, 0.1);
   }
 `;
 

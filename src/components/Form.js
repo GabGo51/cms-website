@@ -95,7 +95,7 @@ const Form = () => {
 
         <ButtonContainer>
           <button onClick={toggleNew}>Première visite</button>
-          <button onClick={toggleOld}>RV de suivi - Patient connu</button>
+          <button onClick={toggleOld}>RV de suivi / Patient connu</button>
         </ButtonContainer>
 
         <i
