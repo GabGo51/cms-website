@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Marc from "../img/hero marc.png";
+import Marc from "../img/Marc.png";
 
 
 const Hero = () => {
