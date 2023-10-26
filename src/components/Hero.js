@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Marc from "../img/hero marc.png";
 
+
 const Hero = () => {
   const scrollToRef = (id) => {
     const element = document.getElementById(id);

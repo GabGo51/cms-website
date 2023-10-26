@@ -1,6 +1,6 @@
 import React from "react";
 import marc from "../img/Marc.png";
-import { styled } from "styled-components";
+import {css, styled, keyframes } from "styled-components";
 import { useState } from "react";
 
 const Team = () => {
@@ -8,23 +8,6 @@ const Team = () => {
 
   const togglePerson = (personName) => {
     setSelectedPerson(personName === selectedPerson ? null : personName);
-  };
-
-  console.log(selectedPerson);
-
-  const scrollToRef = (id) => {
-    const element = document.getElementById(id);
-    console.log(element);
-    if (element) {
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      const targetScrollPosition = elementPosition - 50;
-
-      window.scrollTo({
-        top: targetScrollPosition,
-        behavior: "smooth",
-      });
-    }
   };
 
   return (
@@ -45,10 +28,11 @@ const Team = () => {
                 <span>Dr Marc Gosselin </span>
               </p>
             </ImgBox>
-            <Info>
+            <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marc")}>
-                <p>Voir la Bibliographie</p>{" "}
-                <i className="fa-solid fa-angle-down"></i>
+                {selectedPerson === 'marc' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+                
+                <i className="fa-solid fa-angle-down marc"></i>
               </button>
               {selectedPerson === "marc" && (
                 <div>
@@ -70,10 +54,10 @@ const Team = () => {
                 <span>Dr Mariève Lefebvre </span>
               </p>
             </ImgBox>
-            <Info>
+            <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marie")}>
-                <p>Voir la Bibliographie</p>{" "}
-                <i className="fa-solid fa-angle-down"></i>
+              {selectedPerson === 'marie' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+                <i className="fa-solid fa-angle-down marie"></i>
               </button>
               {selectedPerson === "marie" && (
                 <div>
@@ -94,10 +78,10 @@ const Team = () => {
                 <span>Dr Eric Higgins </span>
               </p>
             </ImgBox>
-            <Info>
+            <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("eric")}>
-                <p>Voir la Bibliographie</p>{" "}
-                <i className="fa-solid fa-angle-down"></i>
+              {selectedPerson === 'eric' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+                <i className="fa-solid fa-angle-down eric"></i>
               </button>
               {selectedPerson === "eric" && (
                 <div>
@@ -120,10 +104,10 @@ const Team = () => {
                 <span>Carolle Lauzon </span>
               </p>
             </ImgBox>
-            <Info>
+            <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("caro")}>
-                <p>Voir la Bibliographie</p>{" "}
-                <i className="fa-solid fa-angle-down"></i>
+              {selectedPerson === 'caro' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+                <i className="fa-solid fa-angle-down caro"></i>
               </button>
               {selectedPerson === "caro" && (
                 <div>
@@ -141,6 +125,9 @@ const Team = () => {
     </Container>
   );
 };
+
+
+
 
 const Container = styled.div`
   display: flex;
@@ -236,28 +223,86 @@ const ImgBox = styled.div`
     font-weight: 500;
   }
 `;
+const fadeIn = keyframes`from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+const rotate = keyframes`from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(180deg);
+}
+`
+const rotateBack = keyframes`from {
+  transform: rotate(180deg);
+}
+to {
+  transform: rotate(180deg);
+}`
+  
+
 
 const Info = styled.div`
   width: 250px;
   font-size: 13px;
+  border: 1px solid rgba(12, 96, 242, 0.2);
+  
+  &:hover{
+    i{
+      transform: translateY(35%);
+    }
+  }
 
   button {
     cursor: pointer;
+    color: #0c60f2;
     width: 100%;
+    height: 40px;
     padding: 10px;
     background-color: rgba(12, 96, 242, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: none;
+    border-bottom:1px solid rgba(12, 96, 242, 0.2) ;
+    
     p {
       margin: 0;
     }
+
+    .marc {
+      transition: 500ms;
+      animation: ${(props) =>
+        props.selectedPerson === "marc" ? css`${rotate} 500ms forwards` : ''};
+    }
+    .marie {
+      transition: 500ms;
+      animation: ${(props) =>
+        props.selectedPerson === "marie" ? css`${rotate} 500ms forwards` : ''};
+    }
+    .eric {
+      transition: 500ms;
+      animation: ${(props) =>
+        props.selectedPerson === "eric" ? css`${rotate} 500ms forwards` : ''};
+    }
+    .caro {
+      transition: 500ms;
+      animation: ${(props) =>
+        props.selectedPerson === "caro" ? css`${rotate} 500ms forwards` : ''};
+    }
+  
   }
+
+  
 
   div {
     padding: 10px;
     background-color: rgba(12, 96, 242, 0.1);
+    animation: ${fadeIn} 500ms forwards;
   }
 `;
 
