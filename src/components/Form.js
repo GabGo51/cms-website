@@ -31,10 +31,10 @@ const Form = () => {
     if (neww) {
       emailjs
         .sendForm(
-          "service_ur9h7eg",
-          "template_m0t003h",
+          "service_ug7744i",
+          "template_idc6z7d",
           Cmsform.current,
-          "IIjHDJtlZvXNDz5yE"
+          "lphnUQ_pFhBd7zGX2"
         )
         .then(
           function (response) {
@@ -54,10 +54,10 @@ const Form = () => {
     if (old) {
       emailjs
         .sendForm(
-          "service_ur9h7eg",
-          "template_5qhwo5l",
+          "service_ug7744i",
+          "template_4a4y7ie",
           Cmsform.current,
-          "IIjHDJtlZvXNDz5yE"
+          "lphnUQ_pFhBd7zGX2"
         )
         .then(
           function (response) {
@@ -244,7 +244,7 @@ const Form = () => {
               <div className="select-box">
                 <label> Choisir votre medecin </label>
                 <select className="select" required name="user_medecin">
-                  <option disabled selected value=""></option>
+                  <option  selected value="Aucune Préférence">Aucune Préférence</option>
                   <option value="Marc Gosselin">Marc Gosselin MD</option>
                   <option value="Eric Higgins">Eric Higgins MD</option>
                   <option value="Marieve Lefebvre">Marieve Lefebvre MD</option>
