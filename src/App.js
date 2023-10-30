@@ -8,6 +8,8 @@ import Form from "./components/Form";
 import Team from "./components/Team";
 import Clinique from "./components/Clinique";
 
+//global components regrouping the whole website
+
 function App() {
   return (
     <Container>

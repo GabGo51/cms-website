@@ -3,9 +3,11 @@ import marc from "../img/Marc.png";
 import {css, styled, keyframes } from "styled-components";
 import { useState } from "react";
 
-const Team = () => {
-  const [selectedPerson, setSelectedPerson] = useState(null);
 
+//display of the staff pictures and descriptions
+const Team = () => {
+  //tracking the selcted person to display the right description
+  const [selectedPerson, setSelectedPerson] = useState(null);
   const togglePerson = (personName) => {
     setSelectedPerson(personName === selectedPerson ? null : personName);
   };

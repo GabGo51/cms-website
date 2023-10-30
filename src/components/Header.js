@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logo1 from "../img/logo1.png";
+
+//Header function containing logo and Nav bar with quick Links
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to toggle the menu
+  // Function to toggle the menu when on mobile design
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  //function to scroll to a certain position depending on the quick link click
   const scrollToRef = (id) => {
     const element = document.getElementById(id);
     console.log(element);
@@ -57,7 +60,6 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   background-color: white;
   color: black;
   position: relative;

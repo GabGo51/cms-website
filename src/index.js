@@ -4,6 +4,8 @@ import Globalstyles from "./Globalstyles";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+//application of the global styles on the site
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

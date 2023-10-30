@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import building from "../img/building.png";
 import office from "../img/office.png";
+
+//Clinique section diplaying imgs of the building and a small intro text abt the CMS
 const Clinique = () => {
   return (
     <Container id="intro">

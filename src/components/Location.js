@@ -1,5 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
+
+//component displaying the ifram google map and the adress to make the location easy to find
 const Location = () => {
   return (
     <Container id="location">
@@ -21,6 +23,7 @@ const Location = () => {
           </div>
         </IconBox>
       </Top>
+      {/* google map section */}
       <iframe
         title="CMS Location"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4680.808362806224!2d-74.00361897841884!3d45.76285226319088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccf2b950f2292f7%3A0xa1b2f2fc9657e2df!2sCentre%20de%20M%C3%A9decine%20sportive%20des%20Laurentides!5e0!3m2!1sen!2sca!4v1694030872312!5m2!1sen!2sca"
@@ -38,7 +41,6 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding-top: 100px;
   h2 {
     font-weight: 600;

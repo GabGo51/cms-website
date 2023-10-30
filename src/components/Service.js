@@ -4,9 +4,10 @@ import swim from "../img/swim.png";
 import gnou from "../img/gnou.png";
 import injection from "../img/injection.jpg";
 import weights from "../img/weights.png";
-import run from "../img/run.jpg";
 import echo from "../img/echo.jpg";
 import plaquette from "../img/plaquette.PNG"
+
+//Displaying the different service in cards format with hover effect 
 const Service = () => {
   return (
     <Container id="service">

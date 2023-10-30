@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 import Serif from "./fonts/aga.otf";
 import Normal from "./fonts/oy.otf";
 
+//mostly css reset and custom fonts
+
 export default createGlobalStyle`
 
   @font-face {

@@ -1,7 +1,10 @@
 import React from "react";
 import { styled } from "styled-components";
 
+//Footer with quick link, contact info and schedule link
+
 const Footer = () => {
+  //quick link smoothscroll function (onClick)
   const scrollToRef = (id) => {
     const element = document.getElementById(id);
     console.log(element);

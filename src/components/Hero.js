@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Marc from "../img/Marc.png";
 
-
+//Hero compo displaying Title, imgs and booking button
 const Hero = () => {
+
+  //function to make the booking button scroll to form 
   const scrollToRef = (id) => {
     const element = document.getElementById(id);
     console.log(element);
@@ -12,6 +14,8 @@ const Hero = () => {
     } else {
     }
   };
+
+  
   return (
     <Container>
       <Box>

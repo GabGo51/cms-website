@@ -4,10 +4,14 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import loadingCircle from "../img/loading.gif";
 
+//Form Components containing both the new client and old client form with a EMAILJS setup to send an email directly to the company.
+
 const Form = () => {
   const Cmsform = useRef();
+  //tracking when new or old should be displayed
   const [neww, setNeww] = useState(false);
   const [old, setOld] = useState(false);
+  //tracking loading state and confirmation message condition
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -23,8 +27,8 @@ const Form = () => {
     setSent(false);
   };
 
+  //function sending the email depending on the state chosen (old vs new) using emailjs
   const handleSubmit = (e) => {
-    //do an if statement depending on the state and use a different template
     e.preventDefault();
     setLoading(true);
 
@@ -76,6 +80,7 @@ const Form = () => {
     }
   };
 
+  //make sure you get the confirmation display when the form is sent (mostly for phone design)
   const scrollToRef = (id) => {
     const element = document.getElementById(id);
     console.log(element);
@@ -90,7 +95,8 @@ const Form = () => {
         <p className="intro">Prise de Rendez-Vous</p>
         <h2>Contactez Nous</h2>
         <p>
-        Notre équipe est à votre disposition pour tenter de répondre et trouver des solutions adaptées à vos besoins.
+          Notre équipe est à votre disposition pour tenter de répondre et
+          trouver des solutions adaptées à vos besoins.
         </p>
 
         <ButtonContainer>
@@ -110,6 +116,7 @@ const Form = () => {
             </p>
           </SentMessage>
         )}
+        {/* Form for New Clients */}
         {neww && (
           <form neww={neww} ref={Cmsform} onSubmit={handleSubmit}>
             <InputBox>
@@ -201,7 +208,7 @@ const Form = () => {
             </InputBox>
             <div>
               <label for="message">
-              Décrivez le motif de votre demande de Rendez-vous
+                Décrivez le motif de votre demande de Rendez-vous
               </label>
               <textarea required name="message" />
             </div>
@@ -218,6 +225,7 @@ const Form = () => {
             )}
           </form>
         )}
+        {/* Form for Old Clients */}
         {old && (
           <form old={old} ref={Cmsform} onSubmit={handleSubmit}>
             <InputBox>
@@ -244,7 +252,9 @@ const Form = () => {
               <div className="select-box">
                 <label> Choisir votre medecin </label>
                 <select className="select" required name="user_medecin">
-                  <option  selected value="Aucune Préférence">Aucune Préférence</option>
+                  <option selected value="Aucune Préférence">
+                    Aucune Préférence
+                  </option>
                   <option value="Marc Gosselin">Marc Gosselin MD</option>
                   <option value="Eric Higgins">Eric Higgins MD</option>
                   <option value="Marieve Lefebvre">Marieve Lefebvre MD</option>
@@ -413,10 +423,8 @@ const Box = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-
   button {
     margin: 1vw 4.7vw;
-    
   }
 `;
 
@@ -482,7 +490,6 @@ const InputBox = styled.div`
 `;
 
 const Loading = styled.img`
-  
   height: 50px;
 `;
 

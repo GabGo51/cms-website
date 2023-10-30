@@ -1,6 +1,48 @@
-# Getting Started with Create React App
+# CMS Laurentide
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This is a medical clinic website displaying the services provided and the team behind the company. The website uses EMAILJS as a form -> email booking. 
+
+## Components
+this project was split in components defining different section and function of the website
+
+### `Header`
+
+Display of the logo and nav bar that navigates the site. 
+
+### `Intro`
+
+Group component for the Hero and Clinique Components.
+
+### `Hero`
+
+Display of the Title h1 , imgs, and bookings
+
+### `Clinique`
+
+Display of imgs and Intro text to present the CMS
+
+### `Service`
+
+Display of the different services provides in a card format
+
+### `Team`
+
+Display of the staff members and their descriptions
+
+### `Form`
+
+Display of the Email.js Form for both Old and New clients. 
+
+### `Location`
+
+Diplay of the Google map Ifram with the adress 
+
+### `Footer`
+
+Display of the same quick links found in the nav bar, some contacts info and a link to their changing schedul
+
 
 ## Available Scripts
 

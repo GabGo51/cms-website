@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import Clinique from "./Clinique";
 import { styled } from "styled-components";
 
-
+//compo where I fit both hero and clinique components (need to do that in the form section)
 const Intro = () => {
   return (
     <Container >
