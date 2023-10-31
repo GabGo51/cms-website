@@ -2,7 +2,9 @@ import React from "react";
 import marc from "../img/Marc.png";
 import {css, styled, keyframes } from "styled-components";
 import { useState } from "react";
-
+import mork from '../img/mork pdp.JPG'
+import caro from '../img/caro pdp.JPG'
+import eric from '../img/eric pdp.JPG'
 
 //display of the staff pictures and descriptions
 const Team = () => {
@@ -24,7 +26,7 @@ const Team = () => {
         <CardBox>
           <TeamCard>
             <ImgBox>
-              <img src={marc} alt="profileigm" />
+              <img src={mork} alt="profileigm" />
               <div className="over"></div>
               <p>
                 <span>Dr Marc Gosselin </span>
@@ -50,7 +52,7 @@ const Team = () => {
           </TeamCard>
           <TeamCard>
             <ImgBox>
-              <img src={marc} alt="profileigm" />
+              <img src={mork} alt="profileigm" />
               <div className="over"></div>
               <p>
                 <span>Dr Mariève Lefebvre </span>
@@ -74,7 +76,7 @@ const Team = () => {
           </TeamCard>
           <TeamCard>
             <ImgBox>
-              <img src={marc} alt="profileigm" />
+              <img src={eric} alt="profileigm" />
               <div className="over"></div>
               <p>
                 <span>Dr Eric Higgins </span>
@@ -100,7 +102,7 @@ const Team = () => {
           </TeamCard>
           <TeamCard>
             <ImgBox>
-              <img src={marc} alt="profileigm" />
+              <img src={caro} alt="profileigm" />
               <div className="over"></div>
               <p>
                 <span>Carolle Lauzon </span>
