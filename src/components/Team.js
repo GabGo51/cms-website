@@ -2,9 +2,9 @@ import React from "react";
 import marc from "../img/Marc.png";
 import {css, styled, keyframes } from "styled-components";
 import { useState } from "react";
-import mork from '../img/mork pdp.JPG'
-import caro from '../img/caro pdp.JPG'
-import eric from '../img/eric pdp.JPG'
+import mork from '../img/mork pdp.jpg'
+import caro from '../img/caro pdp.jpg'
+import eric from '../img/eric pdp.jpg'
 
 //display of the staff pictures and descriptions
 const Team = () => {

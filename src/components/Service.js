@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
-import swim from "../img/swim.png";
-import gnou from "../img/gnou.png";
+import swim from "../img/swim.jpg";
+import gnou from "../img/gnou.jpg";
 import injection from "../img/injection.jpg";
-import weights from "../img/weights.png";
+import weights from "../img/weights.jpg";
 import echo from "../img/echo.jpg";
-import plaquette from "../img/plaquette.PNG"
+import plaquette from "../img/plaquette.jpg"
 
 //Displaying the different service in cards format with hover effect 
 const Service = () => {

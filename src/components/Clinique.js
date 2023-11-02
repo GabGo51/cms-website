@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import building from "../img/building.png";
-import office from "../img/office.png";
+import building from "../img/building.jpg";
+import office from "../img/office.jpg";
 
 //Clinique section diplaying imgs of the building and a small intro text abt the CMS
 const Clinique = () => {
