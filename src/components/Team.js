@@ -203,6 +203,7 @@ const ImgBox = styled.div`
     height: 270px;
     background-color: white;
     border-top-left-radius: 50px;
+    filter: brightness(120%);
   }
 
   .over {

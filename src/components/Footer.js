@@ -29,8 +29,8 @@ const Footer = () => {
       </Nav>
       <Content>
         <h4>Centre de Médecine Sportive des Laurentides</h4>
-        <p>305, rue du Docteur Charles Léonard, Suite 200</p>
-        <p>St-Jérôme, Qc, J7Y 0M9</p>
+        <p>305, rue du Docteur Charles Léonard, Suite 200 St-Jérôme, Qc, J7Y 0M9</p>
+        
         <p>
           Téléphone :<a href="tel:450-438-0911"> 450 438-0911</a>
         </p>
@@ -78,6 +78,7 @@ const Container = styled.footer`
     right: 60px;
     a{
       text-decoration: none;
+      cursor: pointer;
       
     }
   }
@@ -106,7 +107,7 @@ const Nav = styled.nav`
 const Content = styled.div`
   margin-bottom: 20px;
   line-height: 20px;
-  
+  max-width: 550px;
   .email{
     white-space: nowrap;
   }
@@ -128,8 +129,9 @@ const Content = styled.div`
 
 const Schedule = styled.div`
   line-height: 25px;
-  max-width: 300px;
+  max-width: 400px;
   a{
+    cursor: pointer;
     margin-left: 10px;
   }
 `;
