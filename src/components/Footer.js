@@ -51,10 +51,12 @@ const Footer = () => {
         </a></p>
         
       </Schedule>
+      <p className="tag"> © 2023, <a target="#" href="https://www.linkedin.com/in/gabriel-gosselin-802bb5247/">Gabriel Gosselin</a>. Tous droits réservés</p>
     </Container>
   );
 };
 const Container = styled.footer`
+  position: relative;
   display: flex;
   padding: 3vw 5vw;
   justify-content: space-between;
@@ -70,8 +72,19 @@ const Container = styled.footer`
     font-size: 0.9em;
   }
 
+  .tag{
+    position: absolute;
+    bottom: 10px;
+    right: 60px;
+    a{
+      text-decoration: none;
+      
+    }
+  }
+
   @media (max-width: 500px) {
-    padding: 10px 20px;
+    padding: 20px 30px;
+    padding-bottom: 60px;
   }
 `;
 
