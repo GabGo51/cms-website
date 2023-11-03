@@ -13,7 +13,7 @@ const Form = () => {
   const [old, setOld] = useState(false);
   //tracking loading state and confirmation message condition
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(true);
 
   const toggleNew = () => {
     setNeww(!neww);
@@ -98,16 +98,25 @@ const Form = () => {
           Notre équipe est à votre disposition pour tenter de répondre et
           trouver des solutions adaptées à vos besoins.
         </p>
+        {sent ? (
+          <></>
+        ) : (
+          <ButtonContainer>
+            <button onClick={toggleNew}>Première visite</button>
+            <button onClick={toggleOld}>RV de suivi / Patient connu</button>
+          </ButtonContainer>
+        )}
 
-        <ButtonContainer>
-          <button onClick={toggleNew}>Première visite</button>
-          <button onClick={toggleOld}>RV de suivi / Patient connu</button>
-        </ButtonContainer>
-
-        <i
+        {sent ? (
+          <></>
+        ) : (
+          <i
           className="fa-solid fa-angle-down"
           style={{ transform: neww || old ? "rotate(180deg)" : "rotate(0deg)" }}
         ></i>
+        )}
+
+        
         {sent && (
           <SentMessage>
             <p>
@@ -295,20 +304,17 @@ const fadeInAnimation = keyframes`
   }
 `;
 
-
-
 const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
   width: 100vw;
-  
 `;
 
 const Box = styled.div`
   transition: 500ms;
-  width: ${({ neww, old }) => (neww || old ? '100vw' : '1100px')};
+  width: ${({ neww, old }) => (neww || old ? "100vw" : "1100px")};
   border-radius: 30px;
   background-color: #cbdeff;
   color: #252b42;
@@ -456,11 +462,15 @@ const SentMessage = styled.div`
 
   p {
     margin-top: 20px;
+    max-width: 450px;
   }
 
   span {
     color: #1ad334;
     margin: 0px 5px;
+  }
+  @media (max-width:900px) {
+    width: 90%;
   }
 `;
 
