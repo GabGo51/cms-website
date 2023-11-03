@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import building from "../img/building.jpg";
-import office from "../img/office.jpg";
+import building from "../img/building.webp";
+import office from "../img/office.webp";
 
 //Clinique section diplaying imgs of the building and a small intro text abt the CMS
 const Clinique = () => {
@@ -52,7 +52,7 @@ const Clinique = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100vw;
   display: flex;
   justify-content: center;

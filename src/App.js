@@ -24,8 +24,7 @@ function App() {
   );
 }
 
-const Container = styled.div`
-
+const Container = styled.main`
 width: 100vw;
 `;
 

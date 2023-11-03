@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Logo1 from "../img/logo1.png";
+import Logo1 from "../img/logo1.webp";
 
 //Header function containing logo and Nav bar with quick Links
 const Header = () => {

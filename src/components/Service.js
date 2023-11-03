@@ -1,11 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
-import swim from "../img/swim.jpg";
-import gnou from "../img/gnou.jpg";
-import injection from "../img/injection.jpg";
-import weights from "../img/weights.jpg";
-import echo from "../img/echo.jpg";
-import plaquette from "../img/plaquette.jpg"
+import swim from "../img/swim.webp";
+import gnou from "../img/gnou.webp";
+import injection from "../img/injection.webp";
+import weights from "../img/weights.webp";
+import echo from "../img/echo.webp";
+import plaquette from "../img/plaquette.webp"
 
 //Displaying the different service in cards format with hover effect 
 const Service = () => {
@@ -97,7 +97,7 @@ const Service = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;

@@ -2,9 +2,10 @@ import React from "react";
 import marc from "../img/Marc.png";
 import {css, styled, keyframes } from "styled-components";
 import { useState } from "react";
-import mork from '../img/mork pdp.jpg'
-import caro from '../img/caro pdp.jpg'
-import eric from '../img/eric pdp.jpg'
+import mork from '../img/mork pdp.webp'
+import caro from '../img/caro pdp.webp'
+import eric from '../img/eric pdp.webp'
+import marie from '../img/avatar.jpg'
 
 //display of the staff pictures and descriptions
 const Team = () => {
@@ -26,11 +27,11 @@ const Team = () => {
         <CardBox>
           <TeamCard>
             <ImgBox>
-              <img src={mork} alt="profileigm" />
+              <img className="mork-img" src={mork} alt="profileigm" />
               <div className="over"></div>
-              <p>
+              <h3>
                 <span>Dr Marc Gosselin </span>
-              </p>
+              </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marc")}>
@@ -52,11 +53,11 @@ const Team = () => {
           </TeamCard>
           <TeamCard>
             <ImgBox>
-              <img src={mork} alt="profileigm" />
+              <img className="marie-img" src={marie} alt="profileigm" />
               <div className="over"></div>
-              <p>
+              <h3>
                 <span>Dr Mariève Lefebvre </span>
-              </p>
+              </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marie")}>
@@ -78,9 +79,9 @@ const Team = () => {
             <ImgBox>
               <img src={eric} alt="profileigm" />
               <div className="over"></div>
-              <p>
+              <h3>
                 <span>Dr Eric Higgins </span>
-              </p>
+              </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("eric")}>
@@ -104,9 +105,9 @@ const Team = () => {
             <ImgBox>
               <img src={caro} alt="profileigm" />
               <div className="over"></div>
-              <p>
+              <h3>
                 <span>Carolle Lauzon </span>
-              </p>
+              </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("caro")}>
@@ -133,7 +134,7 @@ const Team = () => {
 
 
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,6 +205,16 @@ const ImgBox = styled.div`
     background-color: white;
     border-top-left-radius: 50px;
     filter: brightness(120%);
+    object-fit: cover;
+    
+  }
+
+  .mork-img{
+    
+  }
+
+  .marie-img{
+    filter: brightness(100%);
   }
 
   .over {

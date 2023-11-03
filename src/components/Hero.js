@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Marc from "../img/Marc.png";
+import Marc from "../img/Marc.webp";
 
 //Hero compo displaying Title, imgs and booking button
 const Hero = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
 export default Hero;
 
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: #0c60f2;
   color: white;
   width: 100vw;

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import { styled, keyframes } from "styled-components";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import loadingCircle from "../img/loading.gif";
@@ -91,7 +91,7 @@ const Form = () => {
 
   return (
     <Container neww={neww} old={old} id="booking">
-      <Box>
+      <Box neww={neww} old={old}>
         <p className="intro">Prise de Rendez-Vous</p>
         <h2>Contactez Nous</h2>
         <p>
@@ -134,7 +134,7 @@ const Form = () => {
                   <option value="Homme">Homme</option>
                   <option value="Femme">Femme</option>
                   <option value="Autres">Autres</option>
-                  <option value="Prefere ne pas mentionné">
+                  <option value="Préfère ne pas mentionner">
                     Je préfrere ne pas le mentionné{" "}
                   </option>
                 </select>
@@ -284,16 +284,31 @@ const Form = () => {
   );
 };
 
-const Container = styled.div`
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+
+
+const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
   width: 100vw;
+  
 `;
 
 const Box = styled.div`
-  width: 65vw;
+  transition: 500ms;
+  width: ${({ neww, old }) => (neww || old ? '100vw' : '1100px')};
   border-radius: 30px;
   background-color: #cbdeff;
   color: #252b42;
@@ -369,6 +384,7 @@ const Box = styled.div`
   }
 
   form {
+    animation: ${fadeInAnimation} 1s forwards;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
