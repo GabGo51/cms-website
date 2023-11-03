@@ -13,7 +13,7 @@ const Form = () => {
   const [old, setOld] = useState(false);
   //tracking loading state and confirmation message condition
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(true);
+  const [sent, setSent] = useState(false);
 
   const toggleNew = () => {
     setNeww(!neww);
