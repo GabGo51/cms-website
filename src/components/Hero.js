@@ -133,6 +133,7 @@ const ImageBox = styled.div`
 
   img {
     display: block;
+    transform: translateY(0.4%);
     width: 340px;
     position: relative;
     z-index: 200;
