@@ -103,7 +103,7 @@ const Form = () => {
         ) : (
           <ButtonContainer>
             <button onClick={toggleNew}>Première visite</button>
-            <button onClick={toggleOld}>RV de suivi / Patient connu</button>
+            <button onClick={toggleOld}>Reprise de rendez-vous</button>
           </ButtonContainer>
         )}
 
@@ -214,6 +214,12 @@ const Form = () => {
                   />
                 </div>
               </div>
+              {/* <div>
+                <label>Si oui, veuillez l'inserer ici</label>
+                <div className="file">
+                  <input name="user_file" type="file"/>
+                </div>
+              </div> */}
             </InputBox>
             <div>
               <label for="message">
@@ -511,6 +517,19 @@ const InputBox = styled.div`
 
     &:focus {
       outline: 2px solid rgba(12, 96, 242, 0.2);
+    }
+  }
+
+  .file{
+
+    label{
+      
+    }
+    input{
+      background-color: transparent;
+      padding: 0;
+      padding-top: 10px;
+      width: 250px;
     }
   }
 `;

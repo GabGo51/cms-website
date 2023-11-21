@@ -23,7 +23,7 @@ const Footer = () => {
           <li onClick={() => scrollToRef("intro")}>Clinique</li>
           <li onClick={() => scrollToRef("service")}>Services</li>
           <li onClick={() => scrollToRef("team")}>Équipe</li>
-          <li onClick={() => scrollToRef("location")}>Localisation</li>
+          <li onClick={() => scrollToRef("location")}>Adresse</li>
           <li onClick={() => scrollToRef("booking")}>Rendez-vous</li>
         </ul>
       </Nav>

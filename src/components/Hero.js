@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
           <button onClick={() => scrollToRef("booking")}>
             {" "}
-            PRENDRE RENDEZ VOUS
+            PRENDRE RENDEZ-VOUS
           </button>
         </TextBox>
         <ImageBox>

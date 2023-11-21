@@ -30,12 +30,12 @@ const Team = () => {
               <img className="mork-img" src={mork} alt="profileigm" />
               <div className="over"></div>
               <h3>
-                <span>Dr Marc Gosselin </span>
+                <span>Dr. Marc Gosselin </span>
               </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marc")}>
-                {selectedPerson === 'marc' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+                {selectedPerson === 'marc' ? <p>Cacher la biographie</p>: <p>Voir la biographie</p>}
                 
                 <i className="fa-solid fa-angle-down marc"></i>
               </button>
@@ -56,12 +56,12 @@ const Team = () => {
               <img className="marie-img" src={marie} alt="profileigm" />
               <div className="over"></div>
               <h3>
-                <span>Dr Mariève Lefebvre </span>
+                <span>Dr. Mariève Lefebvre </span>
               </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("marie")}>
-              {selectedPerson === 'marie' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+              {selectedPerson === 'marie' ? <p>Cacher la biographie</p>: <p>Voir la biographie</p>}
                 <i className="fa-solid fa-angle-down marie"></i>
               </button>
               {selectedPerson === "marie" && (
@@ -80,12 +80,12 @@ const Team = () => {
               <img src={eric} alt="profileigm" />
               <div className="over"></div>
               <h3>
-                <span>Dr Eric Higgins </span>
+                <span>Dr. Eric Higgins </span>
               </h3>
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("eric")}>
-              {selectedPerson === 'eric' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+              {selectedPerson === 'eric' ? <p>Cacher la biographie</p>: <p>Voir la biographie</p>}
                 <i className="fa-solid fa-angle-down eric"></i>
               </button>
               {selectedPerson === "eric" && (
@@ -111,7 +111,7 @@ const Team = () => {
             </ImgBox>
             <Info selectedPerson = {selectedPerson}>
               <button onClick={() => togglePerson("caro")}>
-              {selectedPerson === 'caro' ? <p>Cacher la Bibliographie</p>: <p>Voir la Bibliographie</p>}
+              {selectedPerson === 'caro' ? <p>Cacher la biographie</p>: <p>Voir la biographie</p>}
                 <i className="fa-solid fa-angle-down caro"></i>
               </button>
               {selectedPerson === "caro" && (
@@ -231,8 +231,8 @@ const ImgBox = styled.div`
   }
   span {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 10px;
+    left: 10px;
     color: white;
     text-align: center;
     font-size: 20px;
