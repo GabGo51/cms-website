@@ -83,9 +83,9 @@ const Container = styled.footer`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     padding: 20px 30px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
   }
 `;
 

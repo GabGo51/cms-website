@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Marc from "../img/Marc.webp";
+import Run from "../img/DUDE.webp";
 
 //Hero compo displaying Title, imgs and booking button
 const Hero = () => {
@@ -32,7 +33,7 @@ const Hero = () => {
           </button>
         </TextBox>
         <ImageBox>
-          <img src={Marc} />
+          <img src={Run} />
           <div className="design">
             <div className="green"></div>
             <div className="white"></div>
@@ -96,15 +97,16 @@ const Container = styled.section`
 const Box = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   
   max-width: 1225px;
 
   @media (max-width: 850px) {
-    width: 90vw;
+    width: 100vw;
     
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 750px) {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -114,9 +116,21 @@ const Box = styled.div`
 
 const TextBox = styled.div`
   max-width: 700px;
-  min-width: 350px;
+  min-width: 300px;
   margin-top: 70px;
-  margin-right: 80px;
+  margin-right: 100px;
+
+  @media (max-width: 1170px) {
+    padding-left: 20px;
+    h1{
+      font-size: 40px;
+    }
+    p{
+      max-width: 400px;
+    }
+
+    
+  }
 
   @media (max-width: 850px) {
     margin-bottom: 50px;
@@ -130,27 +144,39 @@ const TextBox = styled.div`
 
 const ImageBox = styled.div`
   position: relative;
-
+  width: 340px;
+  margin: 20px;
   img {
     display: block;
-    transform: translateY(0.4%);
-    width: 340px;
+    
+    transform: translate(15%, 2%);
+    width: 180px;
     position: relative;
     z-index: 200;
     opacity: 0;
     animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
     animation-delay: 1s;
-    @media (max-width: 850px) {
-      width: 250px;
+    @media (max-width: 1000px) {
+      width: 140px;
+      transform: translate(20%, -4%);
+    }
+    @media (max-width: 750px) {
+      width: 140px;
+      transform: translate(60%, -2%);
     }
   }
   .design {
     position: absolute;
     top: 20px;
-    left: -10px;
+    left: -60px;
     
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       top: -5px;
+      left: -40px;
+    }
+    @media (max-width: 750px) {
+      top: 0;
+      left: 20px;
     }
   }
   .green {
@@ -163,7 +189,7 @@ const ImageBox = styled.div`
     margin-bottom: 15px;
     animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
     animation-delay: 600ms;
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       width: 200px;
       height: 75px;
     }
@@ -178,7 +204,7 @@ const ImageBox = styled.div`
     border-bottom-left-radius: 30%;
     animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
     animation-delay: 800ms;
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       width: 280px;
       height: 290px;
     }
