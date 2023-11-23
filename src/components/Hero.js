@@ -1,30 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import photo4 from "../img/photo4.png";
-import photo3 from "../img/photo3.png";
-import run from "../img/DUDE.webp";
+import photo from "../img/photo.png";
+import mountain from '../img/mountain.png'
 import { useState, useEffect } from "react";
 
-const images = [photo4,photo3,run]
+
 
 //Hero compo displaying Title, imgs and booking button
 const Hero = () => {
-
-  const [img, setImg] = useState(photo3) 
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      // Get the index of the next image
-      const currentIndex = images.indexOf(img);
-      const nextIndex = (currentIndex + 1) % images.length;
-
-      // Set the new image
-      setImg(images[nextIndex]);
-    }, 5000);
-
-    // Cleanup the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, [img]); // Re-run effect when img changes
 
   //function to make the booking button scroll to form 
   const scrollToRef = (id) => {
@@ -53,13 +36,9 @@ const Hero = () => {
           </button>
         </TextBox>
         <ImageBox>
-          {img === photo4 && <img className="photo4" src={img}/>}
-          {img === photo3 && <img className="photo3" src={img}/>}
-          {img === run && <img className="run" src={img}/>}
-          <div className="design">
-            <div className="green"></div>
-            <div className="white"></div>
-          </div>
+          
+          <img className="photo" src={photo}/>
+          <img className="mountain" src={mountain}/>
         </ImageBox>
       </Box>
     </Container>
@@ -153,7 +132,7 @@ const TextBox = styled.div`
     
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 950px) {
     margin-bottom: 50px;
     margin-right: 0px;
     p{
@@ -165,107 +144,42 @@ const TextBox = styled.div`
 const ImageBox = styled.div`
   position: relative;
   margin: 20px;
-  .run {
-    display: block;
-    transform: translate(45%,-2%);
-    width: 180px;
-    position: absolute;
-    z-index: 200;
-    opacity: 0;
-    animation: fade 5s forwards; /* Apply the fade-in animation */
-    @media (max-width: 1000px) {
-      width: 140px;
-      transform: translate(40%, -2%);
-    }
-    @media (max-width: 750px) {
-      width: 140px;
-      transform: translate(60%, -2%);
-    }
-  }
 
-  .photo4 {
+  .mountain{
+    width: 500px;
+    transform: translateY(-28%);
+    filter: brightness(105%);
+    animation: fadeIn 500ms forwards; /* Apply the fade-in animation */
+    @media (max-width: 550px) {
+      width: 400px;
+  }
+  }
+  
+
+  .photo {
     display: block;
-    transform: translate(-20%,2%);
+    transform: translate(-15%,-20%);
     width: 480px;
     position: absolute;
     z-index: 200;
     opacity: 0;
-    animation: fade 5s forwards; /* Apply the fade-in animation */
+    animation: fadeIn 500ms forwards; /* Apply the fade-in animation */
+    animation-delay: 500ms;
     @media (max-width: 1000px) {
       width: 380px;
       transform: translate(-20%, 0%);
     }
+
+    @media (max-width: 550px) {
+      transform: translate(-8%, -20%);
+      width: 320px;
+  }
   }
 
-  .photo3 {
-    display: block;
-    width: 1000px;
-    position: absolute;
-    transform: translate(-35%, -23%);
-    z-index: 200;
-    opacity: 0;
-    animation: fade 5s forwards; /* Apply the fade-in animation */
-    @media (max-width: 1000px) {
-      width: 780px;
-      transform: translate(-35%, -23%);
+  @media (max-width: 750px) {
+      padding: 50px 0px;
     }
-  }
-  .design {
-  
-    @media (max-width: 1000px) {
-      top: -5px;
-      left: -40px;
-    }
-    @media (max-width: 750px) {
-      top: 0;
-      left: 20px;
-    }
-  }
-  .green {
-    width: 275px;
-    height: 100px;
-    opacity: 0;
-    background-color: #c7d324;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    margin-bottom: 15px;
-    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-    animation-delay: 600ms;
-    @media (max-width: 1000px) {
-      width: 200px;
-      height: 75px;
-    }
-  }
 
-  .white {
-    width: 365px;
-    height: 375px;
-    opacity: 0;
-    background-color: white;
-    border-top-right-radius: 30%;
-    border-bottom-left-radius: 30%;
-    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-    animation-delay: 800ms;
-    @media (max-width: 1000px) {
-      width: 280px;
-      height: 290px;
-    }
-  }
-
-  @keyframes fade {
-  0%{
-    opacity: 0;
-  }
-  10%{
-    opacity: 1;
-  }
-  90%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
 
 @keyframes fadeIn {
   0%{
