@@ -1,10 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import Marc from "../img/Marc.webp";
-import Run from "../img/DUDE.webp";
+import photo4 from "../img/photo4.png";
+import photo3 from "../img/photo3.png";
+import run from "../img/DUDE.webp";
+import { useState, useEffect } from "react";
+
+const images = [photo4,photo3,run]
 
 //Hero compo displaying Title, imgs and booking button
 const Hero = () => {
+
+  const [img, setImg] = useState(photo3) 
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Get the index of the next image
+      const currentIndex = images.indexOf(img);
+      const nextIndex = (currentIndex + 1) % images.length;
+
+      // Set the new image
+      setImg(images[nextIndex]);
+    }, 5000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [img]); // Re-run effect when img changes
 
   //function to make the booking button scroll to form 
   const scrollToRef = (id) => {
@@ -33,7 +53,9 @@ const Hero = () => {
           </button>
         </TextBox>
         <ImageBox>
-          <img src={Run} />
+          {img === photo4 && <img className="photo4" src={img}/>}
+          {img === photo3 && <img className="photo3" src={img}/>}
+          {img === run && <img className="run" src={img}/>}
           <div className="design">
             <div className="green"></div>
             <div className="white"></div>
@@ -57,17 +79,6 @@ const Container = styled.section`
   padding: 50px 0px;
  
 
-  h1 {
-    color: white;
-    margin-bottom: 40px;
-    max-width: 700px;
-    font-weight: 600;
-    font-family: Poppins;
-    font-size: 60px;
-    @media (max-width: 850px) {
-      font-size: 32px;
-    }
-  }
   button {
     background-color: white;
     color: #0c60f2;
@@ -98,7 +109,6 @@ const Box = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   max-width: 1225px;
 
   @media (max-width: 850px) {
@@ -119,6 +129,17 @@ const TextBox = styled.div`
   min-width: 300px;
   margin-top: 70px;
   margin-right: 100px;
+  h1 {
+    color: white;
+    margin-bottom: 40px;
+    max-width: 700px;
+    font-weight: 600;
+    font-family: Poppins;
+    font-size: 60px;
+    @media (max-width: 850px) {
+      font-size: 32px;
+    }
+  }
 
   @media (max-width: 1170px) {
     padding-left: 20px;
@@ -135,7 +156,6 @@ const TextBox = styled.div`
   @media (max-width: 850px) {
     margin-bottom: 50px;
     margin-right: 0px;
-
     p{
       font-size: 14px;
     }
@@ -144,32 +164,54 @@ const TextBox = styled.div`
 
 const ImageBox = styled.div`
   position: relative;
-  width: 340px;
   margin: 20px;
-  img {
+  .run {
     display: block;
-    
-    transform: translate(15%, 2%);
+    transform: translate(45%,-2%);
     width: 180px;
-    position: relative;
+    position: absolute;
     z-index: 200;
     opacity: 0;
-    animation: fadeIn 0.5s forwards; /* Apply the fade-in animation */
-    animation-delay: 1s;
+    animation: fade 5s forwards; /* Apply the fade-in animation */
     @media (max-width: 1000px) {
       width: 140px;
-      transform: translate(20%, -4%);
+      transform: translate(40%, -2%);
     }
     @media (max-width: 750px) {
       width: 140px;
       transform: translate(60%, -2%);
     }
   }
-  .design {
+
+  .photo4 {
+    display: block;
+    transform: translate(-20%,2%);
+    width: 480px;
     position: absolute;
-    top: 20px;
-    left: -60px;
-    
+    z-index: 200;
+    opacity: 0;
+    animation: fade 5s forwards; /* Apply the fade-in animation */
+    @media (max-width: 1000px) {
+      width: 380px;
+      transform: translate(-20%, 0%);
+    }
+  }
+
+  .photo3 {
+    display: block;
+    width: 1000px;
+    position: absolute;
+    transform: translate(-35%, -23%);
+    z-index: 200;
+    opacity: 0;
+    animation: fade 5s forwards; /* Apply the fade-in animation */
+    @media (max-width: 1000px) {
+      width: 780px;
+      transform: translate(-35%, -23%);
+    }
+  }
+  .design {
+  
     @media (max-width: 1000px) {
       top: -5px;
       left: -40px;
@@ -210,11 +252,26 @@ const ImageBox = styled.div`
     }
   }
 
-  @keyframes fadeIn {
-  from {
+  @keyframes fade {
+  0%{
     opacity: 0;
   }
-  to {
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
     opacity: 1;
   }
 }
