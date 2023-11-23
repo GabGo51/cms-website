@@ -4,8 +4,6 @@ import photo from "../img/photo.png";
 import mountain from '../img/mountain.png'
 import { useState, useEffect } from "react";
 
-
-
 //Hero compo displaying Title, imgs and booking button
 const Hero = () => {
 
@@ -56,7 +54,7 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
   padding: 50px 0px;
- 
+  padding-bottom: 85px;
 
   button {
     background-color: white;
@@ -82,6 +80,11 @@ const Container = styled.section`
     max-width: 650px;
     line-height: 30px;
   }
+
+  @media (max-width: 850px) {
+      padding-bottom: 30px;
+      
+    }
 `;
 
 const Box = styled.div`
@@ -104,27 +107,34 @@ const Box = styled.div`
 `;
 
 const TextBox = styled.div`
-  max-width: 700px;
-  min-width: 300px;
+  
   margin-top: 70px;
-  margin-right: 100px;
+  
   h1 {
     color: white;
     margin-bottom: 40px;
-    max-width: 700px;
+    width: 100%;
     font-weight: 600;
     font-family: Poppins;
     font-size: 60px;
+    @media (max-width: 1200px) {
+      font-size: 42px;
+      
+    }
     @media (max-width: 850px) {
       font-size: 32px;
+      min-width: 400px;
+      
+    }
+    @media (max-width: 550px) {
+      font-size: 22px;
+      min-width: 0;
+      max-width: 300px;
     }
   }
 
   @media (max-width: 1170px) {
     padding-left: 20px;
-    h1{
-      font-size: 40px;
-    }
     p{
       max-width: 400px;
     }
@@ -151,7 +161,7 @@ const ImageBox = styled.div`
     filter: brightness(105%);
     animation: fadeIn 500ms forwards; /* Apply the fade-in animation */
     @media (max-width: 550px) {
-      width: 400px;
+      width: 300px;
   }
   }
   
@@ -171,7 +181,7 @@ const ImageBox = styled.div`
     }
 
     @media (max-width: 550px) {
-      transform: translate(-8%, -20%);
+      transform: translate(-20%, -20%);
       width: 320px;
   }
   }
